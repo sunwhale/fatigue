@@ -1,0 +1,424 @@
+\documentclass[preprint,5p,twocolumn,11pt,sort&compress]{elsarticle}
+
+%% For including figures, graphicx.sty has been loaded in
+
+\usepackage{amssymb}
+\usepackage{amsthm}
+\setlength{\mathindent}{0pt}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage{textcomp}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage[colorlinks,linkcolor=red,anchorcolor=blue,citecolor=blue]{hyperref}
+\usepackage{color,soul}
+\usepackage{multirow}
+%\usepackage{xeCJK}
+
+\newcommand{\bfsigma}{{\mbox{\boldmath{$\sigma$}}}}
+\newcommand{\bfepsilon}{{\mbox{\boldmath{$\varepsilon$}}}}
+\newcommand{\dotbfepsilon}{{\mbox{\boldmath{$\dot\varepsilon$}}}}
+\newcommand{\dotbfsigma}{{\mbox{\boldmath{$\dot\sigma$}}}}
+\newcommand{\bftau}{{\mbox{\boldmath{$\tau$}}}}
+\newcommand{\bfpsi}{{\mbox{\boldmath{$\psi$}}}}
+\newcommand{\bfphi}{{\mbox{\boldmath{$\phi$}}}}
+\newcommand{\bfalpha}{{\mbox{\boldmath{$\alpha$}}}}
+\newcommand{\bfbeta}{{\mbox{\boldmath{$\beta$}}}}
+\newcommand{\bfK}{{\bf K}}
+\newcommand{\bff}{{\bf f}}
+\newcommand{\bfn}{{\bf n}}
+\newcommand{\bfm}{{\bf m}}
+\newcommand{\bft}{{\bf t}}
+\newcommand{\bfu}{{\bf u}}
+\newcommand{\bfw}{{\bf w}}
+\newcommand{\bfa}{{\bf a}}
+\newcommand{\bfb}{{\bf b}}
+\newcommand{\bfs}{{\bf s}}
+\newcommand{\bfB}{{\bf B}}
+\newcommand{\bfD}{{\bf D}}
+\newcommand{\bfnabla}{{\mbox{\boldmath{$\nabla$}}}}
+\newcommand{\bfDelta}{{\mbox{\boldmath{$\Delta$}}}}
+\newcommand{\bfkappa}{{\mbox{\boldmath{$\kappa$}}}}
+\newcommand{\bfN}{{\bf N}}
+\newcommand{\bfT}{{\bf T}}
+\newcommand{\bfG}{{\bf G}}
+\newcommand{\bfH}{{\bf H}}
+\newcommand{\dd}{{\rm d}}
+\newcommand{\marked}[1]{\textcolor{red}{#1}}
+
+%\bibliographystyle{elsarticle-num}
+
+\journal{Materials and Design}
+
+\begin{document}
+
+\sethlcolor{yellow}
+
+\begin{frontmatter}
+
+%% Title, authors and addresses
+
+%% use the tnoteref command within \title for footnotes;
+%% use the tnotetext command for theassociated footnote;
+%% use the fnref command within \author or \address for footnotes;
+%% use the fntext command for theassociated footnote;
+%% use the corref command within \author for corresponding author footnotes;
+%% use the cortext command for theassociated footnote;
+%% use the ead command for the email address,
+%% and the form \ead[url] for the home page:
+%% \title{Title\tnoteref{label1}}
+%% \tnotetext[label1]{}
+%% \author{Name\corref{cor1}\fnref{label2}}
+%% \ead{email address}
+%% \ead[url]{home page}
+%% \fntext[label2]{}
+%% \cortext[cor1]{}
+%% \address{Address\fnref{label3}}
+%% \fntext[label3]{}
+
+\title{Life Assessment of Multi-Axial Thermomechanical Fatigue of A Nickel-Based Superalloy}
+
+%% use optional labels to link authors explicitly to addresses:
+%% \author[label1,label2]{}
+%% \address[label1]{}
+%% \address[label2]{}
+
+\author[authorlabel1]{Jingyu SUN}
+\author{Huang YUAN\fnref{label2}}
+
+\address[authorlabel1]{Department of Mechanical Engineering, University of Wuppertal, Germany}
+\address[label2]{School of Aerospace Engineering, Tsinghua University, Beijing, China\fnref{label2}}
+\cortext[cor1]{Corresponding author.}
+\ead{yuan.huang@tsinghua.edu.cn}
+
+\begin{abstract}
+Mechanical parts in aero engines are loaded by both mechanical loading and thermal loading simultaneously. Experiments revealed that the mechanical behavior as well as fatigue performance of the material depend on amplitudes and the phase angle of the thermo-mechanical loads. Description of the interdependence of the loads is one of the most intensively investigated topics in aero engine structures. In the present work, extensive experiments are performed for a nickel-based superalloy under both iso-thermal and thermo-mechanical loading conditions. Furthermore, fatigue tests reveal that the thermomechanical loading reduces fatigue life of the material significantly. Based on experimental data a thermomechanical loading parameter is introduced to assess TMF fatigue failure. The TMF fatigue life can be calibrated based on the present concept reasonably.
+\end{abstract}
+
+%\include{debut}
+\begin{keyword}
+% keywords here, in the form: keyword \sep keyword
+Thermomechanical Fatigue (TFM) \sep Multi-Axial Fatigue \sep Fatigue Damage \sep Fatigue Life \sep Nickel-based super alloy
+
+% PACS codes here, in the form: \PACS code \sep code
+% \PACS
+\end{keyword}
+\end{frontmatter}
+
+% main text
+\section{Introduction}
+Gas turbine components experience severe cyclic multi-axial mechanical loadings and thermal loadings in the high pressure compressor and turbine modules. The increasing operating temperatures in gas turbines are pushing materials closer to their operating limits. Therefore, it is necessary to characterize the deformation and fatigue behavior of materials under the more realistic conditions \cite{Harrison1996}.
+
+There are a few studies on the isothermal low cycle fatigue of the nickel-based superalloy published in past years \cite{Mahobia2014}\cite{Chen2016}\cite{Ye2004}. Uniaxial thermomechanical fatigue (TMF) tests \cite{Evans2008}\cite{Kulawinski2015}\cite{Remy2003}\cite{Bauer2009} were published and phenomenological fatigue models \cite{Vose2013} were proposed to predict the material fatigue life under isothermal and thermo-mechanical loading conditions. However, these works are limited to the uniaxial loading condition. It is well known the deformation and damage mechanisms under multiaxial loads can significantly differ from those under uniaxial loading \cite{Fang2015}\cite{Kang2004}\cite{Chen2004}. Most components in aero gas turbine engines, in particular in turbine blades, typically experience significant variations in multiaxial states of stress, strain and temperatures under non-isothermal conditions. There are few works on the multiaxial TMF fatigue life published \cite{Brookes2010}.
+
+The present paper introduces the experimental facility of a non-proportional thermomechanical fatigue test and discusses results of multiaxial TMF fatigue life. Finally both elastic-plastic behavior and fatigue life under TMF loading condition are investigated. It is shown that the TMF affects fatigue performance of the material significantly.
+
+\section{Experiments}
+\subsection{Material specification}
+The investigated material is the nickel-base superalloy Inconel 718 in the form of rods of 20mm diameter, which was procured by ThyssenKrupp VDM GmbH.
+The rods were solution-treated at 980$^{\circ}$C for one and a half hour then cooled to room temperature by water.
+Then they were aged for eight hours at 720$^{\circ}$C, furnace cooled at 56$^{\circ}$C/h to 621$^{\circ}$C, where they were held for eight hours and forced air cooling to room temperature.
+The chemical composition of the nickel-base superalloy Inconel 718 in the research is given in Table \ref{Tab:ChemicalCompositionofIN718}.
+\begin{table*}[htbp]
+  \centering
+  \caption{Chemical composition of IN718 (wt. \%) in the research.}
+    \begin{tabular}{llllllllll}
+    \hline
+    C     & S     & Cr    & Ni    & Mn    & Si    & Mo    & Ti    & Nb    & Cu \\
+    \hline
+    0.02  & $<$0.001 & 18.53 & 53.44 & 0.05  & 0.06  & 3.06  & 0.99  & 5.30  & 0.04 \\
+    \hline
+    Fe    & P     & Al    & Pb    & Co    & B     & Ta    & Se    & Bi    &  \\
+    \hline
+    17.71 & 0.007 & 0.56  & 0.0002 & 0.13  & 0.004 & $<$0.01 & $<$0.0003 & $<$0.00003 &  \\
+    \hline
+    \end{tabular}%
+  \label{Tab:ChemicalCompositionofIN718}%
+\end{table*}%
+\subsection{Specimen and testing equipment}
+Inconel 718 is one of the most popular nickel-based superalloys used in turbine engines. The material possesses optimal property at both room temperature as well as at elevated temperature and does not reveal obvious creep up to $650^\circ$C. The thin-walled tubular test specimen, as shown in Fig. 1, was used in the present investigation. The specimen dimension is in accordance with ASTM E2207 \cite{ASTM2014} and match the extensometer, the furnace height and the induction coil. The experiments confirm that the specimen geometry influences temperature distribution. Consequently the final geometry is determined by computational experiments and temperature measurement for optimal experiments.
+
+\begin{figure}
+  \begin{minipage}[t]{0.5\linewidth}
+  \nonumber
+    \centering
+    \includegraphics[width=4.5cm]{Figs/LoadPath1.pdf}
+    \centerline{\small (a) Tension-Compression.}
+  \end{minipage}%
+  \begin{minipage}[t]{0.5\linewidth}
+    \centering
+    \includegraphics[width=4.5cm]{Figs/LoadPath2.pdf}
+    \centerline{\small (b) Proportional Path.}
+  \end{minipage}
+  \begin{minipage}[t]{0.5\linewidth}
+  \nonumber
+    \centering
+    \includegraphics[width=4.5cm]{Figs/LoadPath3.pdf}
+    \centerline{\small (c) Diamond Path.}
+  \end{minipage}%
+  \begin{minipage}[t]{0.5\linewidth}
+    \centering
+    \includegraphics[width=4.5cm]{Figs/LoadPath4.pdf}
+    \centerline{\small (d) Cross Path.}
+  \end{minipage}
+  \caption{Strain paths in isothermal tests.}
+  \label{Fig:LoadPath}
+\end{figure}
+
+The shape of the induction coil influences the temperature distribution of the specimen. Induction heating efficiency is dependent on the coil density and the distance between the coil and specimen surface. A concentrated coil density and a short distance to the specimen surface result in high heat flux. The coil has to be optimized for a optimal smooth axial temperature distribution in both heating and cooling processes. Temperature is measured with a thermocouple (type K) installed with compression junctions to the specimen. The final axial temperature deviations within the gauge length 12mm are below $\pm5^\circ$C by total $650^\circ$C and within the gauge length 25mm are less than $\pm14^\circ$C.
+
+Experiments were conducted on an MTS tension-torsion servo hydraulic test machine. Cooling is achieved by enforced air convection and heating is achieved by the induction heating device. The system is capable of applying both axial and biaxial loads with the temperature variation simultaneously. Thus, uniaxial or biaxial stress state can be generated under a given certain temperature range in the specimen. Also the test requirements from ASTM standard E2368 \cite{ASTM2014a} should be considered. Fig. \ref{Fig:Equipments} shows the induction heating system. The strains were measured using the high temperature axial and biaxial extensometers which contact the specimen surface with two ceramic rods. The gauge length of the axial-torsional extensometers is 25mm.
+
+\begin{figure}[!htp]
+\centering{\includegraphics[width=8.5cm]{Figs/IN718_Multiaxial_Specimen.pdf}}
+\caption{Geometry of the specimens investigated in the present work.}
+\label{Fig:Specimen}
+\end{figure}
+
+\begin{figure}[!htp]
+\centering{\includegraphics[width=8.5cm]{Figs/Equipments.pdf}}
+\caption{Induction heating system with biaxial test system MTS809.}
+\label{Fig:Equipments}
+\end{figure}
+
+\begin{table*}[htbp]
+  \centering
+  \caption{Test matrix.}
+    \begin{tabular}{p{2cm}p{1.5cm}p{1.5cm}p{1.5cm}p{2.5cm}p{1cm}p{1cm}p{1cm}p{1cm}}
+    \hline
+    Test Type & $\pm \varepsilon _m$ & $\pm \gamma/ \sqrt 3$ & $\varepsilon _{eq}$ & $\dot \varepsilon _{eq}$ & $\theta_{T-\varepsilon}$ & $\theta_{T-\gamma}$ & $\theta_{\varepsilon-\gamma}$ & $N_f$ \\
+          & [\%]  & [\%]  & [\%]  & [s$^{-1}$] & [$^\circ$] & [$^\circ$] & [$^\circ$] &  \\
+    \hline
+    TC-IF & 1.00  & -     & 1.00  & $1\times 10^{-3}$ & -     & -     & -     & 231 \\
+          & 0.80  & -     & 0.80  & $1\times 10^{-3}$ & -     & -     & -     & 326 \\
+          & 0.70  & -     & 0.70  & $1\times 10^{-3}$ & -     & -     & -     & 592 \\
+          & 0.60  & -     & 0.60  & $1\times 10^{-3}$ & -     & -     & -     & 1336 \\
+          & 0.50  & -     & 0.50  & $1\times 10^{-3}$ & -     & -     & -     & 8449 \\
+          & 0.45  & -     & 0.45  & $1\times 10^{-3}$ & -     & -     & -     & 15497 \\
+          & 0.40  & -     & 0.40  & $6.4\times 10^{-3}$ & -     & -     & -     & 130585 \\
+    \hline
+    TC-IP & 1.00  & -     & 1.00  & $2.22\times 10^{-4}$ & 0     & -     & -     & 58 \\
+          & 0.80  & -     & 0.80  & $1.78\times 10^{-4}$ & 0     & -     & -     & 176 \\
+          & 0.70  & -     & 0.70  & $1.56\times 10^{-4}$ & 0     & -     & -     & 248 \\
+          & 0.60  & -     & 0.60  & $1.33\times 10^{-4}$ & 0     & -     & -     & 1297 \\
+    \hline
+    TC-OP & 1.00  & -     & 1.00  & $2.22\times 10^{-4}$ & 180   & -     & -     & 209 \\
+          & 0.80  & -     & 0.80  & $1.78\times 10^{-4}$ & 180   & -     & -     & 303 \\
+          & 0.70  & -     & 0.70  & $1.56\times 10^{-4}$ & 180   & -     & -     & 429 \\
+          & 0.65  & -     & 0.65  & $1.44\times 10^{-4}$ & 180   & -     & -     & 633 \\
+    \hline
+    TC-90 & 1.00  & -     & 1.00  & $2.22\times 10^{-4}$ & 90    & -     & -     & 387 \\
+    \hline
+    PRO-IP & 0.71  & 0.71  & 1.00  & $2.22\times 10^{-4}$ & 0     & 0     & 0     & 260 \\
+          & 0.57  & 0.57  & 0.80  & $1.78\times 10^{-4}$ & 0     & 0     & 0     & 288 \\
+          & 0.57  & 0.57  & 0.80  & $1.78\times 10^{-4}$ & 0     & 0     & 0     & 550 \\
+          & 0.42  & 0.42  & 0.60  & $1.33\times 10^{-4}$ & 0     & 0     & 0     & 2848 \\
+    \hline
+    NPR-IP & 1.00  & 1.00  & 1.00  & $2.22\times 10^{-4}$ & 0     & 90    & 90    & 43 \\
+          & 0.80  & 0.80  & 0.80  & $1.78\times 10^{-4}$ & 0     & 90    & 90    & 45 \\
+          & 0.70  & 0.70  & 0.70  & $1.56\times 10^{-4}$ & 0     & 90    & 90    & 54 \\
+          & 0.70  & 0.70  & 0.70  & $1.56\times 10^{-4}$ & 0     & 90    & 90    & 220 \\
+          & 0.60  & 0.60  & 0.60  & $1.33\times 10^{-4}$ & 0     & 90    & 90    & 152 \\
+          & 0.50  & 0.50  & 0.50  & $1.11\times 10^{-4}$ & 0     & 90    & 90    & 2544 \\
+    \hline
+    \end{tabular}%
+  \label{Tab:TestMatrix}%
+\end{table*}%
+
+\subsection{Mechanical testing}
+According to the standard ASTM E2368-10, a thermomechanical fatigue cycle requests uniform temperature and strain fields over the specimen gage section which vary simultaneously and independently under given loading conditions. In the test followng factors may influence the experimental results:
+\begin{itemize}
+  \item {\em Thermal strain}, $\varepsilon_{th}$, is induced by temperature and assumed to be linear proportional to temperature increment, $\varepsilon_{th}=\alpha \Delta T$.
+  \item {\em Mechanical strain}, $\varepsilon_{m}$, is resulting from applied load and directly related with material deformation and damage.
+  \item {\em Total strain}, $\varepsilon_t$, is measured by the extensometer and denotes the sum of the thermal and mechanical strains, $\varepsilon_t=\varepsilon_m+\varepsilon_{th}$
+  \item {\em Strain ratio}, $ R_{\varepsilon}=\varepsilon_{m,\min}/\varepsilon_{m,\max}$, denotes the loading ratio represented by the minimum mechanical strain over the maximum mechanical strain in a loading cycle.
+  \item {\em Phase angle of the mechanical loading and thermal loading}, $\varphi$, represents the time difference between maximum values of both loads.
+\end{itemize}
+
+\begin{figure}[!htp]
+\centering{\includegraphics[width=8.5cm]{Figs/plot_elastic_by_temperature_in718.pdf}}
+\caption{Geometry of the specimens investigated in the present work.}
+\label{Fig:plot_elastic_by_temperature_in718}
+\end{figure}
+
+All tests were performed in air and ran under mechanical strain control with three different strain paths. As shown in Fig. 3, the tension compression, proportional and non-proportional paths were conducted with strain ratio $R_{\varepsilon}=-1$. Strain ratio R¦Å means the ratio of minimum mechanical strain to the maximum mechanical strain in a strain cycle. The temperature was cycles from $T_{min}=300^\circ$C to $T_{max}=650^\circ$C at a heating/cooling rates 3.89K/s with equal ramp rates forming a triangular cycle.
+
+The mechanical strain component ($\varepsilon_{m}$) resulting when the free expansion thermal strain component ($\varepsilon_{th}$) is subtracted from the total strain ($\varepsilon_{t}$). In order to account for the thermal expansion during the tests, each specimen was heated by the induction heating device to the intended thermal cycle of the experiment under zero force control. Under this condition the specimen can expand freely and the thermal expansion was measured.
+Figure 4 shows variations of the axial mechanical strain, the equivalent shear strain and temperature versus time. The test ran under non-proportional diamond strain path with a in-phase temperature cycle.
+
+
+\section{Results and Discussions}
+\begin{figure}[!htp]
+\centering{\includegraphics[width=8.5cm]{Figs/plot_exp_half_life_cycle.pdf}}
+\caption{Stress-strain hysteresis loops of the half life cycle $N_f/2$, with strain range of $\pm0.4\%$, $\pm0.45\%$, $\pm0.4\%$, $\pm0.5\%$, $\pm0.6\%$, $\pm0.7\%$, $\pm0.8\%$ and $\pm1.0\%$.}
+\label{Fig:plot_exp_half_life_cycle}
+\end{figure}
+
+\begin{figure}[!htp]
+\centering{\includegraphics[width=8.5cm]{Figs/plot_monotonic_cyclic_osgood.pdf}}
+\caption{Monotonic and cyclic stress-strain curve with Ramberg-Osgood relationship for Inconel 718.}
+\label{Fig:plot_monotonic_cyclic_osgood}
+\end{figure}
+
+The nickel-base superalloy IN718 is one of the most common structural alloys that are used in aero engines.
+Therefore a large number of publications that report its mechanical properties exist.
+A series of strain controlled fatigue tests at $649^\circ$C have been completed by KS Kim \cite{kim1988elevated} and RS Nelson \cite{nelson1992creep} from NASA with strain rate from $2\times10^{-4}$s$^{-1}$ to $5\times10^{-3}$s$^{-1}$.
+Another experiments were carried out by Mahobia et al. \cite{Mahobia2014}
+in air under total axial strain control at $650^\circ$C with strain rate from $4.8\times10^{-3}$s$^{-1}$ to $1.2\times10^{-2}$s$^{-1}$.
+Heat treatments and processing of the specimens are similar.
+Experimental results of present tests and the tests reported in the articles are given in Table \ref{tab:MechanicalProperties}.
+
+The variation of fatigue life, in terms of number of reversals to failure ($2N_f$), with elastic strain amplitude
+($\Delta \varepsilon_e/2$) and plastic strain amplitude ($\Delta \varepsilon_p/2$), was assessed by the Coffin-Manson relationship:
+\begin{equation}
+\frac{{\Delta \varepsilon }}{2} = \frac{{\Delta {\varepsilon _e}}}{2} + \frac{{\Delta {\varepsilon _p}}}{2} = \frac{{{{\sigma '}_f}}}{E}{\left( {2{N_f}} \right)^b} + {\varepsilon '_f}{\left( {2{N_f}} \right)^c},
+\label{Equ:CoffinManson}
+\end{equation}
+where ${{{\sigma '}_f}}$ is fatigue strength coefficient, $b$ is fatigue strength exponent, ${{{\varepsilon '}_f}}$ is fatigue ductility coefficient and $c$ is fatigue ductility exponent.
+A Ramberg-Osgood type curve is used to express the cyclic stress-strain behavior as:
+\begin{equation}
+\frac{{\Delta \varepsilon }}{2} = \frac{{\Delta \sigma }}{{2E}} + {\left( {\frac{{\Delta \sigma }}{{2K'}}} \right)^{1/n'}},
+\end{equation}
+where $K'$ is cyclic strength coefficient and $n'$ is cyclic strain hardening exponent.
+\begin{figure}[!htp]
+\centering{\includegraphics[width=8.5cm]{Figs/plot_exp_coffin_manson.pdf}}
+\caption{Coffin-Manson plots of the isothermal fatigue tests.}
+\label{Fig:Baseline}
+\end{figure}
+
+\begin{figure}[!htp]
+\centering{\includegraphics[width=8.5cm]{Figs/plot_exp_fatigue_life.pdf}}
+\caption{Monotonic and cyclic stress-strain curve with Ramberg-Osgood relationship for Inconel 718.}
+\label{Fig:plot_exp_fatigue_life}
+\end{figure}
+
+A comparison of basic monotonic and cyclic properties of Nickel-based superalloy Inconel 718 is given in Table \ref{tab:MechanicalProperties}.
+\begin{table*}[htbp]
+  \centering
+  \caption{Basic monotonic and cyclic properties of Nickel-based superalloy Inconel 718.}
+    \begin{tabular}{llllllll}
+    \hline
+          & $E$     & $K'$     & $n'$     & $\sigma_f$    & $b$     & $\varepsilon_f$    & $c$ \\
+    \hline
+    NASA \cite{kim1988elevated}\cite{nelson1992creep}  & 162.6 GPa & 1827 MPa  & 0.16723 & 1348 MPa & -0.10052 & 0.12445 & -0.55218 \\
+    THU   & 167.1 GPa & 1406 MPa  & 0.10527 & 1034 MPa & -0.04486 & 0.11499 & -0.52436 \\
+    BHU \cite{Mahobia2014}   & 177.2 GPa & 1420 MPa  & 0.11332 & 985 MPa & -0.03917 & 0.24721 & -0.55682 \\
+    \hline
+    \end{tabular}%
+  \label{tab:MechanicalProperties}%
+\end{table*}%
+
+Fatigue tests with three different loading paths should give a systematical overview about the thermomechanical behavior of the material. Under strain-controlled uniaxial cyclic loading with mean mechanical strain, both IP and OP TMF results show the cyclic softening behavior as well as the hysteresis loops reaches a stable state with increasing number of cycles. The difference between IP and OP TMF stress-strain variations was observed that a mean stress decreasing during the IP TMF tests but increasing during the OP TMF tests. The proportional path IP TMF test shows the similar cyclic softening behavior of the uniaxial IP TMF tests. Also a mean stress decreasing was investigated in both axial and hoop directions.
+
+Figure 5 shows the experimental results of the multiaxial tests with the diamond mechanical strain path and IP temperature cycles, strain amplitude $\varepsilon_{eq} = \pm1$\%. Inconel 718 shows the cyclic softening behavior at both 300$^\circ$C and 650$^\circ$C. And the softening behavior is observed much more at higher temperature than lower temperature.
+Fig. 6 shows the Mises equivalent strain amplitude vs. number of cycles to failure under four loading conditions: uniaxial in phase IP TMF, uniaxial out of phase OP TMF, proportional axial-torsional IP TMF and non-proportional axial torsional (diamond path) IP TMF.
+
+Firstly, we consider the in phase IP and out of phase OP effect under uniaxial tests. The out of phase OP cycles resulted in lives that are significantly longer than the in phase IP tests at the equivalent strain amplitude 1\%. As the strain amplitude decrease, the deviations of fatigue life Nf  becomes smaller.
+Secondly, we consider the multiaxial effect on the fatigue life. Because the temperature cycles of all the IF TMF tests from 300$^\circ$C to 650$^\circ$C remain the same. It was observed previously that the fatigue life of the multiaxial diamond path in phase IP TMF tests is shorter than the uniaxial in phase IP TMF tests. But the fatigue life of the proportional load path IP TMF tests is longer than the uniaxial IP TMF tests. This phenomenon was suggested to be related to the number of equivalent plastic strain of the two different strain paths.
+
+\subsection{Brown-Miller Model}
+Based on the critical plane concepts \cite{Brown2006}, Wang and Brown \cite{Wang1993} proposed that the Kandil, Brown and Miller fatigue parameter \cite{Kandil1982} can be reformulated as the equivalent shear strain amplitude:
+\begin{equation}
+\frac{{\Delta \hat \gamma }}{2} = \frac{{\Delta {\gamma _{max}}}}{2} + S\Delta {\varepsilon _n},
+\label{Equ:ShearStrainBM}
+\end{equation}
+where $\frac{{\Delta \hat \gamma }}{2}$ is the equivalent shear strain range, $\Delta {\varepsilon _n}$ represents the normal strain excursion on the on the plane with the maximum strain range $\Delta {\gamma _{max}}$. The material dependent parameter S represents the influence of the normal strain on the crack propagation.
+The fatigue endurance is suggested as:
+\begin{equation}
+\frac{{\Delta \hat \gamma }}{2} = A\frac{{{{\sigma '}_f}}}{E}{\left( {2{N_f}} \right)^b} + B{{\varepsilon '}_f}{\left( {2{N_f}} \right)^c},
+\end{equation}
+with
+\[A = 1 + {\nu _e} + \left( {1 - {\nu _e}} \right)S,\]
+and
+\[B = 1 + {\nu _p} + \left( {1 - {\nu _p}} \right)S.\]
+\begin{figure}[!htp]
+\centering{\includegraphics[width=8.5cm]{Figs/NF-NP-BM.pdf}}
+\caption{Brown-Miller Model.}
+\label{Fig:NF-NP-BM}
+\end{figure}
+
+\subsection{Fatemi-Socie Model}
+Based on the work of Brown and Miller, Fatemi and Socie \cite{Fatemi1988} proposed that the normal strain term in Equation (\ref{Equ:ShearStrainBM}) should be replaced by the normal stress.
+The equivalent shear strain amplitude is developed as:
+%\begin{equation}
+%\end{equation}
+\begin{equation}
+\frac{{\Delta \hat \gamma }}{2} = \frac{{\Delta {\gamma _{\max }}}}{2}\left( {1 + k\frac{{{\sigma _{n,max}}}}{{{\sigma _y}}}} \right),
+\end{equation}
+where
+$\sigma _{n,max}$ is the maximum normal stress on the critical plane suffering the maximum strain range $\Delta {\gamma _{max}}$, k is a material parameter, the sensitivity of the material to normal stress is reflected in the ratio $k/\sigma_y$.
+They developed a damaging model oriented on the shear-based damage initiation:
+\begin{equation}
+\frac{{\Delta \hat \gamma }}{2} = \frac{{{{\tau '}_f}}}{G}{\left( {2{N_f}} \right)^{{b_0}}} + {{\gamma '}_f}{\left( {2{N_f}} \right)^{{c_0}}}.
+\end{equation}
+Furthermore, McClaflin and Fatemi \cite{McClaflin2004} proposed that the sensitivity parameter k is varied with fatigue life and can be expressed by tension and torsion data:
+\begin{equation}
+k = \left( {\frac{{\frac{{{{\tau '}_f}}}{G}{{\left( {2{N_f}} \right)}^{{b_0}}} + {{\gamma '}_f}{{\left( {2{N_f}} \right)}^{{c_0}}}}}{{\left( {1 + {\nu _e}} \right)\frac{{{{\sigma '}_f}}}{E}{{\left( {2{N_f}} \right)}^b} + \left( {1 + {\nu _p}} \right){{\varepsilon '}_f}{{\left( {2{N_f}} \right)}^c}}} - 1} \right)\frac{{{\sigma _y}}}{{{{\sigma '}_f}{{\left( {2{N_f}} \right)}^b}}}.
+\end{equation}
+
+%where the equivalent shear strain on the critical plane was based on a combination of the maximum shear strain amplitude $\Delta \gamma$ and maximum normal stress $\sigma _{n,max}$ during the cycle. The shear strain was used as the variable decisive for the rain-flow decomposition.
+%The criterion used to be based on the MSSR maximization.
+\begin{figure}[!htp]
+\centering{\includegraphics[width=8.5cm]{Figs/NF-NP-FS.pdf}}
+\caption{Fatemi-Socie Model.}
+\label{Fig:NF-NP-FS}
+\end{figure}
+
+\subsection{Smith-Watson-Topper Model}
+SWT parameter is based on the principal strain range ¦¤¦Å1 and the maximum stress on the plane of the principal
+strain range
+
+\[{\sigma _{n,max}}\frac{{\Delta \varepsilon }}{2} = \frac{{{{\sigma '}_f}^2}}{E}{\left( {2{N_f}} \right)^{2b}} + {\sigma '_f}{\varepsilon '_f}{\left( {2{N_f}} \right)^{b + c}}\]
+\begin{figure}[!htp]
+\centering{\includegraphics[width=8.5cm]{Figs/NF-NP-SWT.pdf}}
+\caption{Smith-Watson-Topper Model.}
+\label{Fig:NF-NP-SWT}
+\end{figure}
+
+\subsection{Liu Tension Strain Energy Model}
+\[{\left( {\Delta {\sigma _n}\Delta {\varepsilon _n}} \right)_{\max }} + \left( {\Delta \tau \Delta \gamma } \right) = \frac{{4{{\sigma '}_f}^2}}{E}{\left( {2{N_f}} \right)^{2b}} + 4{{\sigma '}_f}{{\varepsilon '}_f}{\left( {2{N_f}} \right)^{b + c}}\]
+\begin{figure}[!htp]
+\centering{\includegraphics[width=8.5cm]{Figs/NF-NP-Liu1.pdf}}
+\caption{Liu Tension Strain Energy Model.}
+\label{Fig:NF-NP-Liu}
+\end{figure}
+
+\subsection{Liu Shear Strain Energy Model}
+\[\left( {\Delta {\sigma _n}\Delta {\varepsilon _n}} \right) + {\left( {\Delta \tau \Delta \gamma } \right)_{\max }} = \frac{{4{{\tau '}_f}^2}}{G}{\left( {2{N_f}} \right)^{2b\gamma }} + 4{{\tau '}_f}{{\gamma '}_f}{\left( {2{N_f}} \right)^{b\gamma  + c\gamma }}\]
+\begin{figure}[!htp]
+\centering{\includegraphics[width=8.5cm]{Figs/NF-NP-Liu2.pdf}}
+\caption{Liu Shear Strain Energy Model.}
+\label{Fig:NF-NP-Liu2}
+\end{figure}
+
+\subsection{Chu Strain Energy Model}
+\[{\left( {{\tau _{n,\max }}\frac{{\Delta \gamma }}{2} + {\sigma _{n,\max }}\frac{{\Delta \varepsilon }}{2}} \right)_{\max }} = 1.02\frac{{{{\sigma '}_f}^2}}{E}{\left( {2{N_f}} \right)^{2b}} + 1.04{{\sigma '}_f}{{\varepsilon '}_f}{\left( {2{N_f}} \right)^{b + c}}\]
+\begin{figure}[!htp]
+\centering{\includegraphics[width=8.5cm]{Figs/NF-NP-Chu.pdf}}
+\caption{Chu Strain Energy Model.}
+\label{Fig:NF-NP-Chu}
+\end{figure}
+
+\section{Summary}
+This paper has described the experimental facility of a non-proportional thermomechanical fatigue test. The machine had to be carefully calibrated from its original design to improve the thermal gradient and ensure the control stability of the axial-torsional extensometers.
+A summary of the important mechanical test results is:
+The uniaxial out of phase OP TMF test has a longer lifetime than the uniaxial in phase IP test within the Mises equivalent mechanical strain amplitude range from 0.5% to 1%.
+Fatigue lives are strongly influenced by the strain path. At the same equivalent mechanical strain and the same in phase IP temperature conditions, the non-proportional diamond path test has a shorter lifetime than the uniaxial and 45? proportional path test.
+
+The life predictions from the known fatigue models are unsatisfactory. The plots contains generally large scatterings, which implies improper fatigue variables in the models.
+A TMF life prediction model has to consider influences from varying temperature as well as the non-proportional loads. The TMF life prediction is still an open issue.
+
+
+
+
+
+
+\section*{Acknowledgement:} The present work is financed by the China Natural Science Foundation under the contract number 51175041.
+
+
+\bibliographystyle{unsrt}            % bibliography style
+%\bibliographystyle{plain}            % bibliography style
+\bibliography{bibliography}          % personal bibliography file
+
+\end{document} 
