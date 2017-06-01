@@ -19,6 +19,7 @@
 *.xl*
 *.rar
 *.crtx
+*.spl
 
 ## Intermediate documents:
 *.dvi
