@@ -1,7 +1,5 @@
 \documentclass[preprint,5p,twocolumn,11pt,sort&compress]{elsarticle}
 
-%% For including figures, graphicx.sty has been loaded in
-
 \usepackage{amssymb}
 \usepackage{amsthm}
 \setlength{\mathindent}{0pt}
@@ -48,6 +46,7 @@
 \newcommand{\marked}[1]{\textcolor{red}{#1}}
 
 %\bibliographystyle{elsarticle-num}
+\graphicspath{{F:/Cloud/GitHub/fatigue/figs/}{F:/Cloud/GitHub/doctor/figs/python/}{F:/Cloud/GitHub/doctor/figs/ppt/}}
 
 \journal{International Journal of Fatigue}
 
@@ -151,7 +150,7 @@ The chemical composition of the nickel-base superalloy Inconel 718 in the resear
 
 
 \begin{figure}[!htp]
-\centering{\includegraphics[width=8.5cm]{Figs/IN718_Multiaxial_Specimen.pdf}}
+\centering{\includegraphics[width=8.5cm]{IN718_Multiaxial_Specimen.pdf}}
 \caption{Geometry of the specimens investigated in the present work.}
 \label{Fig:Specimen}
 \end{figure}
@@ -162,8 +161,8 @@ The thin-walled tubular specimen, as shown in Fig. \ref{Fig:Specimen}, was used 
 The shape of the induction coil influences the temperature distribution in the specimen. Induction heating efficiency is dependent on the coil density and the distance between the coil and specimen surface. A concentrated coil density and a short distance to the specimen surface results in high heat flux. The coil has to be optimized for an optimal smooth axial temperature distribution in both heating and cooling processes. Temperature is measured with a thermocouple (type K) installed with compression junctions to the specimen. The final axial temperature deviations within the gauge length 12mm are below $\pm5^\circ$C by total $650^\circ$C and within the gauge length 25mm are less than $\pm14^\circ$C, as shown in Fig. \ref{Fig:Temp-Distr}.
 
 \begin{figure}[!htp]
-\includegraphics[width=8.5cm]{Figs/Thermal_Stability.pdf}
-\includegraphics[width=8.5cm]{Figs/Thermal_Stability_Deviation.pdf}
+\includegraphics[width=8.5cm]{plot_thermal_stability.pdf}
+\includegraphics[width=8.5cm]{plot_thermal_stability_deviation.pdf}
 \caption{Temperature distribution in thermomechanical fatigue test. (a) Variations of temperature at the upper and lower border of the measure region. (b) Deviations of the upper and lower temperature to the controlling temperature. \marked{The legends in the figures have to be changed. Discuss with me for the details. It could be better to include a strain curve to illustrate the phase angle.}}
 \label{Fig:Temp-Distr}
 \end{figure}
@@ -171,7 +170,7 @@ The shape of the induction coil influences the temperature distribution in the s
 Experiments were conducted on an MTS tension-torsion servo hydraulic test machine. Cooling is achieved by enforced air convection and heating is achieved by the induction heating device. The system is capable of applying both axial and biaxial loads with the temperature variation simultaneously. Thus, uniaxial or biaxial stress state can be generated under a given certain temperature range in the specimen. Also the test requirements from ASTM standard E2368 \cite{ASTM2014a} should be considered. Fig. \ref{Fig:Equipments} shows the induction heating system. The strains were measured using the high temperature axial and biaxial extensometers which contact the specimen surface with two ceramic rods. The gauge length of the axial-torsional extensometers is 25mm.
 
 \begin{figure}[!htp]
-\centering{\includegraphics[width=8.5cm]{Figs/Equipments.pdf}}
+\centering{\includegraphics[width=8.5cm]{Equipments.pdf}}
 \caption{Induction heating system with biaxial test system MTS809.}
 \label{Fig:Equipments}
 \end{figure}
@@ -191,32 +190,35 @@ According to the standard ASTM E2368-10, a thermomechanical fatigue cycle reques
   \begin{minipage}[t]{0.5\linewidth}
   \nonumber
     \centering
-    \includegraphics[width=4.5cm]{Figs/LoadPath1.pdf}
-    \centerline{\small (a) Tension-Compression.}
+    \includegraphics[width=4.5cm]{load_path_1.pdf}
+    \centerline{\small (a) Tension-Compression}
+    \centerline{\small (TC).}
   \end{minipage}%
   \begin{minipage}[t]{0.5\linewidth}
     \centering
-    \includegraphics[width=4.5cm]{Figs/LoadPath2.pdf}
-    \centerline{\small (b) Proportional Path.}
+    \includegraphics[width=4.5cm]{load_path_2.pdf}
+    \centerline{\small (b) Proportional Path}
+    \centerline{\small (PRO).}
   \end{minipage}
+  \centering
   \begin{minipage}[t]{0.5\linewidth}
   \nonumber
     \centering
-    \includegraphics[width=4.5cm]{Figs/LoadPath3.pdf}
-    \centerline{\small (c) Diamond Path.}
+    \includegraphics[width=4.5cm]{load_path_3.pdf}
+    \centerline{\small (c) Diamond Path (NPR).}
   \end{minipage}%
-  \begin{minipage}[t]{0.5\linewidth}
-    \centering
-    \includegraphics[width=4.5cm]{Figs/LoadPath4.pdf}
-    \centerline{\small (d) Cross Path.}
-  \end{minipage}
-  \caption{Strain paths in isothermal tests.}
+  % \begin{minipage}[t]{0.5\linewidth}
+  %   \centering
+  %   \includegraphics[width=4.5cm]{load_path_4.pdf}
+  %   \centerline{\small (d) Cross Path.}
+  % \end{minipage}
+  \caption{Strain paths in thermo-mechanical fatigue tests.}
   \label{Fig:LoadPath}
 \end{figure}
 
 
 \begin{figure}[!htp]
-\centering{\includegraphics[width=8.5cm]{Figs/plot_elastic_by_temperature_in718.pdf}}
+\centering{\includegraphics[width=8.5cm]{plot_elastic_by_temperature_in718.pdf}}
 \caption{Elastic material property as a function of temperature. \marked{The vertical axis has to be changed.}}
 \label{Fig:plot_elastic_by_temperature_in718}
 \end{figure}
@@ -293,7 +295,7 @@ Heat treatments and processing of all the specimens are similar to those of the 
 
 \begin{table*}[htbp]
   \centering
-  \caption{Basic monotonic and cyclic properties of Nickel-based superalloy Inconel 718 \marked{(Monotonic data is missing)}.}
+  \caption{Basic properties of Nickel-based superalloy Inconel 718 at 650$^{\circ}$C.}
     \begin{tabular}{llllllll}
     \hline
           & $E$     & $K'$     & $n'$     & $\sigma_f$    & $b$     & $\varepsilon_f$    & $c$ \\
@@ -322,14 +324,14 @@ Comparison between the present experiments and Ramberg-Osgood model is illustrat
 More detailed discussions about cyclic plasticity for the Inconel718 are referred a separate publication by the authors \cite{Sun2017}.
 
 \begin{figure}[!htp]
-\centering{\includegraphics[width=8.5cm]{Figs/plot_monotonic_cyclic_osgood.pdf}}
+\centering{\includegraphics[width=8.5cm]{plot_monotonic_cyclic_osgood.pdf}}
 \caption{Monotonic and cyclic stress-strain curve with Ramberg-Osgood relationship for Inconel 718. \marked{(Add the monotonic experimental data. They are necessary.)}}
 \label{Fig:plot_monotonic_cyclic_osgood}
 \end{figure}
 
 
 \begin{figure}[!htp]
-\centering{\includegraphics[width=8.5cm]{Figs/plot_exp_half_life_cycle.pdf}}
+\centering{\includegraphics[width=8.5cm]{plot_exp_half_life_cycle-TC-IF.pdf}}
 \caption{Comparison of the stress-strain hysteresis loops of the half life cycle $N_f/2$ between experiments and Ramberg-Osgood model, with strain ranges of $\pm0.4\%, \pm0.5\%, \pm0.6\%, \pm0.7\%, \pm0.8\%$ and $\pm1.0\%$. \marked{(Reduce results. Just show  $\pm0.4\%,  \pm0.7\%$ and $\pm1.0\%$ results, but with comparison between experiments and Ramberg-Osgood model.)}}
 \label{Fig:plot_exp_half_life_cycle}
 \end{figure}
@@ -343,13 +345,13 @@ The Manson-Coffin model is popular in engineering fatigue life assessment, in wh
 where ${{{\sigma '}_f}}$ is the fatigue strength coefficient, $b$ is the fatigue strength exponent, ${{{\varepsilon '}_f}}$ is the fatigue ductility coefficient and $c$ is the fatigue ductility exponent. The model parameters can be determined from uniaxial fatigue data in combining with the Ramberg-Osgood model. The results are summarized in Table \ref{tab:MechanicalProperties} for all three series of experiments.
 
 \begin{figure}[!htp]
-\centering{\includegraphics[width=8.5cm]{Figs/plot_exp_coffin_manson.pdf}}
+\centering{\includegraphics[width=8.5cm]{plot_exp_coffin_manson.pdf}}
 \caption{Manson-Coffin plots of the isothermal fatigue tests.}
 \label{Fig:Baseline}
 \end{figure}
 
 \begin{figure}[!htp]
-\centering{\includegraphics[width=8.5cm]{Figs/plot_exp_fatigue_life.pdf}}
+\centering{\includegraphics[width=8.5cm]{plot_exp_fatigue_life_tmf.pdf}}
 \caption{Manson-Coffin plots of the TMF fatigue tests.}
 \label{Fig:plot_exp_fatigue_life}
 \end{figure}
@@ -386,9 +388,9 @@ with
 and
 \[B = 1 + {\nu _p} + \left( {1 - {\nu _p}} \right)S.\]
 \begin{figure}[!htp]
-\centering{\includegraphics[width=8.5cm]{Figs/NF-NP-BM.pdf}}
+\centering{\includegraphics[width=8.5cm]{NF-NP-TMF-BM.pdf}}
 \caption{Brown-Miller Model.}
-\label{Fig:NF-NP-BM}
+\label{Fig:NF-NP-TMF-BM}
 \end{figure}
 
 \subsection{Fatemi-Socie Model}
@@ -417,9 +419,9 @@ k_0 =  {\frac{{\frac{{{{\tau '}_f}}}{G}{{\left( {2{N_f}} \right)}^{{b_0}}} + {{\
 %where the equivalent shear strain on the critical plane was based on a combination of the maximum shear strain amplitude $\Delta \gamma$ and maximum normal stress $\sigma _{n,max}$ during the cycle. The shear strain was used as the variable decisive for the rain-flow decomposition.
 %The criterion used to be based on the MSSR maximization.
 \begin{figure}[!htp]
-\centering{\includegraphics[width=8.5cm]{Figs/NF-NP-FS.pdf}}
+\centering{\includegraphics[width=8.5cm]{NF-NP-TMF-FS.pdf}}
 \caption{Fatemi-Socie Model.}
-\label{Fig:NF-NP-FS}
+\label{Fig:NF-NP-TMF-FS}
 \end{figure}
 
 \subsection{Smith-Watson-Topper Model}
@@ -428,9 +430,9 @@ strain range
 
 \[{\sigma _{n,max}}\frac{{\Delta \varepsilon }}{2} = \frac{{{{\sigma '}_f}^2}}{E}{\left( {2{N_f}} \right)^{2b}} + {\sigma '_f}{\varepsilon '_f}{\left( {2{N_f}} \right)^{b + c}}\]
 \begin{figure}[!htp]
-\centering{\includegraphics[width=8.5cm]{Figs/NF-NP-SWT.pdf}}
+\centering{\includegraphics[width=8.5cm]{NF-NP-TMF-SWT.pdf}}
 \caption{Smith-Watson-Topper Model.}
-\label{Fig:NF-NP-SWT}
+\label{Fig:NF-NP-TMF-SWT}
 \end{figure}
 
 \subsection{Liu's Strain Energy Models}
@@ -441,9 +443,9 @@ strain range
 \end{eqnarray*}
 
 \begin{figure}[!htp]
-\centering{\includegraphics[width=8.5cm]{Figs/NF-NP-Liu1.pdf}}
+\centering{\includegraphics[width=8.5cm]{NF-NP-TMF-Liu1.pdf}}
 \caption{Liu Tension Strain Energy Model.}
-\label{Fig:NF-NP-Liu}
+\label{Fig:NF-NP-TMF-Liu}
 \end{figure}
 
 \begin{eqnarray*}
@@ -453,9 +455,9 @@ strain range
 \end{eqnarray*}
 
 \begin{figure}[!htp]
-\centering{\includegraphics[width=8.5cm]{Figs/NF-NP-Liu2.pdf}}
+\centering{\includegraphics[width=8.5cm]{NF-NP-TMF-Liu2.pdf}}
 \caption{Liu Shear Strain Energy Model.}
-\label{Fig:NF-NP-Liu2}
+\label{Fig:NF-NP-TMF-Liu2}
 \end{figure}
 
 \subsection{Chu Strain Energy Model}
@@ -465,9 +467,9 @@ strain range
 \end{eqnarray*}
 
 \begin{figure}[!htp]
-\centering{\includegraphics[width=8.5cm]{Figs/NF-NP-Chu.pdf}}
+\centering{\includegraphics[width=8.5cm]{NF-NP-TMF-Chu.pdf}}
 \caption{Chu Strain Energy Model.}
-\label{Fig:NF-NP-Chu}
+\label{Fig:NF-NP-TMF-Chu}
 \end{figure}
 
 \section{Conlusions}
