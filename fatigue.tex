@@ -12,6 +12,7 @@
 \usepackage[colorlinks,linkcolor=red,anchorcolor=blue,citecolor=blue]{hyperref}
 \usepackage{color,soul}
 \usepackage{multirow}
+\usepackage{overpic}
 % \usepackage{ctex}
 
 \newcommand{\bfsigma}{{\mbox{\boldmath{$\sigma$}}}}
@@ -46,7 +47,7 @@
 \newcommand{\marked}[1]{\textcolor{red}{#1}}
 
 %\bibliographystyle{elsarticle-num}
-\graphicspath{{F:/Cloud/GitHub/fatigue/figs/}{F:/Cloud/GitHub/doctor/figs/python/}{F:/Cloud/GitHub/doctor/figs/ppt/}}
+\graphicspath{{F:/Cloud/GitHub/fatigue/figs/}{F:/Cloud/GitHub/doctor/figs/python/}{F:/Cloud/GitHub/doctor/figs/ppt/}{F:/Cloud/GitHub/doctor/figs/sem/}}
 
 \journal{International Journal of Fatigue}
 
@@ -93,12 +94,6 @@
 \ead{yuan.huang@tsinghua.edu.cn}
 
 \begin{abstract}
-Inconel 718镍基高温合金广泛用于燃气轮机热端部件，绝大多数部件在服役条件下都承受非比例热机械疲劳(TMF)载荷。
-通过开展比例与非比例加载条件下不同相位角的热机械疲劳试验，研究非比例热机械疲劳的失效机理。
-结果表明，在300~650$^{\circ}$热机械疲劳条件下，没有发现明显的蠕变与氧化现象，低周疲劳为主要的失效模式。
-在应变幅值较大的情况下，同相位（IP）热机械疲劳寿命要低于反相位（OP）热机械疲劳寿命。
-对于相同等效应变幅值，非比例加载条件下的TMF寿命要大大低于比例加载和单轴载荷的TMF寿命。
-选取多种多轴疲劳模型对试验数据进行预测，误差较大，其中SWT模型预测的结果相对较好，在5倍分散带内。
 
 Turbine components are generally under mechanical and thermal loads. Recent works confirm significant effects of thermomechanical loads to fatigue life assessment. In the present work, extensive experiments are performed for a nickel-based superalloy under both iso-thermal and thermo-mechanical loading conditions to quantify influence of thermal phase angle and loading non-proportionality. Based on experimental data a thermomechanical loading parameter is introduced to assess fatigue failure. The thermomechanical fatigue life can be calibrated based on the present concept reasonably.
 \end{abstract}
@@ -126,14 +121,20 @@ The present paper considers thermomechanical fatigue under tension-torsion loadi
 
 \section{Experiments}
 \subsection{Material specification}
-Inconel 718 is one of the most popular nickel-based superalloys used in turbine engines. The material possesses optimal property at both room temperature as well as at elevated temperature and does not reveal obvious creep up to $650^\circ$C.  The investigated material is the nickel-base superalloy Inconel 718 in the form of rods of 20mm diameter, which was provided by ThyssenKrupp VDM GmbH.
+% Inconel 718 is one of the most popular nickel-based superalloys used in turbine engines. The material possesses optimal property at both room temperature as well as at elevated temperature and does not reveal obvious creep up to $650^\circ$C. 
+The investigated material is the nickel-base superalloy Inconel 718, which was provided by ThyssenKrupp VDM GmbH.
+in the form of rods of 20mm diameter
 The rods were solution-treated at 980$^{\circ}$C for one and a half hour then cooled to room temperature by water.
 Then they were aged for eight hours at 720$^{\circ}$C, furnace cooled at 56$^{\circ}$C/h to 621$^{\circ}$C, where they were held for eight hours and forced air cooling to room temperature.
 The chemical composition of the nickel-base superalloy Inconel 718 in the research is given in Table \ref{Tab:ChemicalCompositionofIN718}.
 
+The initial microstructure of the superalloy Inconel 718 used in this study is shown by Fig. \ref{Fig:microstructure_200X}.
+After polishing, the sample was electrolytically etched with oxalic acid.
+According to the linear intercept method, the average diameter of the initial grains is about 20 $\mu$m.
+
 \begin{table*}[htbp]
   \centering
-  \caption{Chemical composition of IN718 (wt. \%) in the present work}\vspace{0.1cm}
+  \caption{Chemical composition of Inconel 718 (wt. \%) in the present work}\vspace{0.1cm}
     \begin{tabular}{llllllllll}
     \hline
     C     & S     & Cr    & Ni    & Mn    & Si    & Mo    & Ti    & Nb    & Cu \\
@@ -148,6 +149,12 @@ The chemical composition of the nickel-base superalloy Inconel 718 in the resear
   \label{Tab:ChemicalCompositionofIN718}%
 \end{table*}%
 
+\begin{figure}[!htp]
+\centering
+\includegraphics[width=8.5cm]{microstructure_200X.png}
+\caption{Initial microstructure of the specimen section.}
+\label{Fig:microstructure_200X}
+\end{figure}
 
 \begin{figure}[!htp]
 \centering{\includegraphics[width=8.5cm]{IN718_Multiaxial_Specimen.pdf}}
@@ -160,11 +167,19 @@ The thin-walled tubular specimen, as shown in Fig. \ref{Fig:Specimen}, was used 
 
 The shape of the induction coil influences the temperature distribution in the specimen. Induction heating efficiency is dependent on the coil density and the distance between the coil and specimen surface. A concentrated coil density and a short distance to the specimen surface results in high heat flux. The coil has to be optimized for an optimal smooth axial temperature distribution in both heating and cooling processes. Temperature is measured with a thermocouple (type K) installed with compression junctions to the specimen. The final axial temperature deviations within the gauge length 12mm are below $\pm5^\circ$C by total $650^\circ$C and within the gauge length 25mm are less than $\pm14^\circ$C, as shown in Fig. \ref{Fig:Temp-Distr}.
 
+
 \begin{figure}[!htp]
 \includegraphics[width=8.5cm]{plot_thermal_stability.pdf}
 \includegraphics[width=8.5cm]{plot_thermal_stability_deviation.pdf}
 \caption{Temperature distribution in thermomechanical fatigue test. (a) Variations of temperature at the upper and lower border of the measure region. (b) Deviations of the upper and lower temperature to the controlling temperature. \marked{The legends in the figures have to be changed. Discuss with me for the details. It could be better to include a strain curve to illustrate the phase angle.}}
 \label{Fig:Temp-Distr}
+\end{figure}
+
+\begin{figure}[!htp]
+\includegraphics[width=8.5cm]{plot_schematic_thermal_strain_IP.pdf}
+\includegraphics[width=8.5cm]{plot_schematic_thermal_strain_OP.pdf}
+\caption{Temperature distribution in thermomechanical fatigue test. (a) Variations of temperature at the upper and lower border of the measure region. (b) Deviations of the upper and lower temperature to the controlling temperature.}
+\label{Fig:plot_schematic_thermal_strain}
 \end{figure}
 
 Experiments were conducted on an MTS tension-torsion servo hydraulic test machine. Cooling is achieved by enforced air convection and heating is achieved by the induction heating device. The system is capable of applying both axial and biaxial loads with the temperature variation simultaneously. Thus, uniaxial or biaxial stress state can be generated under a given certain temperature range in the specimen. Also the test requirements from ASTM standard E2368 \cite{ASTM2014a} should be considered. Fig. \ref{Fig:Equipments} shows the induction heating system. The strains were measured using the high temperature axial and biaxial extensometers which contact the specimen surface with two ceramic rods. The gauge length of the axial-torsional extensometers is 25mm.
@@ -223,7 +238,7 @@ According to the standard ASTM E2368-10, a thermomechanical fatigue cycle reques
 \label{Fig:plot_elastic_by_temperature_in718}
 \end{figure}
 
-Fatigue tests were performed in air and under mechanical strain control with three different strain paths. The multi-axial fatigue test  ran under given axial strain $\varepsilon$ and shear strain $\gamma$ in a cycle. The proportional and the non-proportional loading paths are shown in Figures \ref{Fig:LoadPath}. While Fig. \ref{Fig:LoadPath} (b) shows a proportional load,  Figs. \ref{Fig:LoadPath} (c) and (d) define two non-proportional loads, with very different characteristics.
+Fatigue tests were performed in air and under mechanical strain control with three different strain paths. The multi-axial fatigue tests ran under given axial strain $\varepsilon$ and shear strain $\gamma$ in a cycle. The proportional and the non-proportional loading paths are shown in Figures \ref{Fig:LoadPath}. While Fig. \ref{Fig:LoadPath} (b) shows a proportional load,  Figs. \ref{Fig:LoadPath} (c) and (d) define two non-proportional loads, with very different characteristics.
 Loading ratio $R_\varepsilon$ means the ratio of minimum mechanical strain to the maximum mechanical strain in a loading cycle. Under the tension-torsion condition, the loading ratio is calculated from the principal strains.
 
 In comparing with isothermal fatigue, the thermomechanical fatigue is conducted under varying temperature, as shown in Fig. \ref{Fig:Temp-Distr}, in which the thermomechanical loads are characterized additionally by the phase angle, $\varphi$. In the present work, the temperature cycled from $T_{min}=300^\circ$C to $T_{max}=650^\circ$C at a heating/cooling rates of 3.89K/s with the constant ramp rates forming a triangular cycle. The test matrix for the present work is summarized in Table \ref{Tab:TestMatrix}, with both varying loading amplitudes and different phase angles. Effects of the loading proportionality is an additional issue to be clarified experimentally.
@@ -370,6 +385,99 @@ Fig. \ref{Fig:plot_monotonic_cyclic_osgood} shows the Mises equivalent strain am
 Firstly, we consider the in phase IP and out of phase OP effect under uniaxial tests. The out of phase OP cycles resulted in lives that are significantly longer than the in phase IP tests at the equivalent strain amplitude 1\%. As the strain amplitude decrease, the deviations of fatigue life Nf  becomes smaller.
 Secondly, we consider the multiaxial effect on the fatigue life. Because the temperature cycles of all the IF TMF tests from 300$^\circ$C to 650$^\circ$C remain the same. It was observed previously that the fatigue life of the multiaxial diamond path in phase IP TMF tests is shorter than the uniaxial in phase IP TMF tests. But the fatigue life of the proportional load path IP TMF tests is longer than the uniaxial IP TMF tests. This phenomenon was suggested to be related to the number of equivalent plastic strain of the two different strain paths.
 
+\section{Microstructural investigations}
+\begin{figure*}
+  \begin{minipage}[t]{0.5\linewidth} % 如果一行放2个图，用0.5，如果3个图，用0.33\
+  \nonumber
+    \centering
+    \begin{overpic}[width=6.0cm]{7112-1.jpg}
+      \put(0,65){\fcolorbox{white}{white}{(a)}}
+      \put(50,40){\color{white}\thicklines\vector(1,1){15.5}}
+    \end{overpic}
+  \end{minipage}%
+  \begin{minipage}[t]{0.5\linewidth}
+    \centering
+    \begin{overpic}[width=6.0cm]{7047-1.jpg}
+      \put(0,65){\fcolorbox{white}{white}{(b)}}
+      \put(50,40){\color{white}\thicklines\vector(3,1){25}}
+    \end{overpic}
+  \end{minipage}
+
+  \begin{minipage}[t]{0.5\linewidth} % 如果一行放2个图，用0.5，如果3个图，用0.33\
+  \nonumber
+    \centering
+    \begin{overpic}[width=6.0cm]{7033-1.jpg}
+      \put(0,65){\fcolorbox{white}{white}{(c)}}
+      \put(45,40){\color{white}\thicklines\vector(1,0){18}}
+    \end{overpic}
+  \end{minipage}%
+  \begin{minipage}[t]{0.5\linewidth}
+    \centering
+    \begin{overpic}[width=6.0cm]{7040-3.jpg}
+      \put(0,65){\fcolorbox{white}{white}{(d)}}
+      \put(50,30){\color{white}\thicklines\vector(1,1){20}}
+    \end{overpic}
+  \end{minipage}
+
+  \begin{minipage}[t]{0.5\linewidth} % 如果一行放2个图，用0.5，如果3个图，用0.33\
+  \nonumber
+    \centering
+    \begin{overpic}[width=6.0cm]{7046-6.jpg}
+      \put(0,65){\fcolorbox{white}{white}{(e)}}
+      \put(60,40){\color{white}\thicklines\vector(-1,-2){11}}
+    \end{overpic}
+  \end{minipage}%
+
+  \caption{Locations of crack initiation: (a)TC-IF 0.45\%, (b)TC-IP 0.6\%, (c)TC-OP 0.65\%, (d)RPO-IP 0.6\%, (e)NPR-IP 0.7\%, (f)TGMF-OP 0.45\%.}
+  \label{Fig:crack_initiation}
+\end{figure*}
+
+\begin{figure*}
+  \begin{minipage}[t]{0.5\linewidth} % 如果一行放2个图，用0.5，如果3个图，用0.33\
+  \nonumber
+    \centering
+    \begin{overpic}[width=6.0cm]{7112-4.jpg}
+      \put(0,65){\fcolorbox{white}{white}{(a)}}
+      \put(50,50){\color{white}\thicklines\vector(-1,-1){20}}
+    \end{overpic}
+  \end{minipage}%
+  \begin{minipage}[t]{0.5\linewidth}
+    \centering
+    \begin{overpic}[width=6.0cm]{7047-7.jpg}
+      \put(0,65){\fcolorbox{white}{white}{(b)}}
+      \put(50,50){\color{white}\thicklines\vector(-1,-1){20}}
+    \end{overpic}
+  \end{minipage}
+
+  \begin{minipage}[t]{0.5\linewidth} % 如果一行放2个图，用0.5，如果3个图，用0.33\
+  \nonumber
+    \centering
+    \begin{overpic}[width=6.0cm]{7033-16.jpg}
+      \put(0,65){\fcolorbox{white}{white}{(c)}}
+      \put(50,50){\color{white}\thicklines\vector(-1,1){20}}
+    \end{overpic}
+  \end{minipage}%
+  \begin{minipage}[t]{0.5\linewidth}
+    \centering
+    \begin{overpic}[width=6.0cm]{7040-5.jpg}
+      \put(0,65){\fcolorbox{white}{white}{(d)}}
+      \put(50,30){\color{white}\thicklines\vector(-1,-1){20}}
+    \end{overpic}
+  \end{minipage}
+
+  \begin{minipage}[t]{0.5\linewidth} % 如果一行放2个图，用0.5，如果3个图，用0.33\
+  \nonumber
+    \centering
+    \begin{overpic}[width=6.0cm]{7046-8.jpg}
+      \put(0,65){\fcolorbox{white}{white}{(e)}}
+      \put(30,30){\color{white}\thicklines\vector(1,2){11}}
+    \end{overpic}
+  \end{minipage}%
+
+  \caption{Observation of fatigue striations on fractures surface: (a)TC-IF 0.45\%, (b)TC-IP 0.6\%, (c)TC-OP 0.65\%, (d)PRO-IP 0.6\%, (e)NPR-IP 0.7\%}
+  \label{Fig:fatigue_striations}
+\end{figure*}
+
 \section{ Thermomechanical Fatigue Assessment}
 
 \subsection{Brown-Miller Model}
@@ -470,6 +578,38 @@ strain range
 \centering{\includegraphics[width=8.5cm]{NF-NP-TMF-Chu.pdf}}
 \caption{Chu Strain Energy Model.}
 \label{Fig:NF-NP-TMF-Chu}
+\end{figure}
+
+
+
+\marked{Figure \ref{Fig:plot_fatigue_life_quantitative_evaluation_tmf} shows a quantitative assessment of fatigue life prediction results. The comparison
+between calculated Ncal and experimental Nexp fatigue lives has been made by means of two statistical parameters.
+The first of them is a mean dispersion of fatigue life}
+
+\[{T_N} = {10^{\bar E}}\]
+
+where $\bar E$is given by:
+
+\[\bar E = \frac{1}{n}\sum\limits_{i = 1}^n {\log \left( {\frac{{{N_{\exp ,i}}}}{{{N_{cal,i}}}}} \right)} \]
+where n is a number of the compared results. The second parameter is a life prediction mean-squared error
+
+\[{T_{RMS}} = {10^{{E_{RMS}}}}\]
+where $E_{RMS}$ is given by:
+\[{E_{RMS}} = \sqrt {\frac{1}{n}\sum\limits_{i = 1}^n {{{\log }^2}\left( {\frac{{{N_{\exp ,i}}}}{{{N_{cal,i}}}}} \right)} } \]
+
+\marked{
+$T_N$ equals 1 when mean experimental and calculated fatigue lives are equal; more than 1 when the experimental life values are higher than the calculated ones; lower than 1 when the experimental life values are lower than the calculated ones. The $T_N$ quantity is insensitive to the dispersion of life. It can assume the same value for the results with low and high statistical dispersion. Quantity $T_{RMS}$ is a measure of statistical dispersion. It assumes the value equal 1 when the mean and the statistical dispersion of experimental and computational life are identical. It is higher than 1 in other cases. $T_{RMS}$ does not provide any information on whether the computational life is higher or lower than the experimental one.}
+
+\begin{figure}[!htp]
+\centering
+\begin{overpic}[width=8.5cm]{plot_fatigue_life_quantitative_evaluation_tmf_TN.pdf}
+\put(14,65){\fcolorbox{white}{white}{(a)}}
+\end{overpic}
+\begin{overpic}[width=8.5cm]{plot_fatigue_life_quantitative_evaluation_tmf_TRMS.pdf}
+\put(14,65){\fcolorbox{white}{white}{(b)}}
+\end{overpic}
+\caption{The quantitative evaluation of the fatigue life prediction results: (a)$T_N$, (b)$T_{RMS}$.}
+\label{Fig:plot_fatigue_life_quantitative_evaluation_tmf}
 \end{figure}
 
 \section{Conlusions}
