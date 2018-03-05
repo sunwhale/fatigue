@@ -14,6 +14,7 @@
 \usepackage{multirow}
 \usepackage{overpic}
 % \usepackage{ctex}
+\usepackage{caption}
 
 \newcommand{\bfsigma}{{\mbox{\boldmath{$\sigma$}}}}
 \newcommand{\bfepsilon}{{\mbox{\boldmath{$\varepsilon$}}}}
@@ -52,6 +53,10 @@
 \journal{International Journal of Fatigue}
 
 \begin{document}
+
+\captionsetup[figure]{labelfont={bf},font={footnotesize},name={Fig.},labelsep=period}
+
+\captionsetup[table]{labelfont={bf},font={footnotesize},name={Tabel},labelsep=period}
 
 \sethlcolor{yellow}
 
@@ -171,18 +176,18 @@ The shape of the induction coil influences the temperature distribution in the s
 \begin{figure}[!htp]
 \includegraphics[width=8.5cm]{plot_thermal_stability.pdf}
 \includegraphics[width=8.5cm]{plot_thermal_stability_deviation.pdf}
-\caption{Temperature distribution in thermomechanical fatigue test. (a) Variations of temperature at the upper and lower border of the measure region. (b) Deviations of the upper and lower temperature to the controlling temperature. \marked{The legends in the figures have to be changed. Discuss with me for the details. It could be better to include a strain curve to illustrate the phase angle.}}
+\caption{Temperature distribution in thermomechanical fatigue test. (a) Variations of temperature at the upper and lower border of the measure region. (b) Deviations of the upper and lower temperature to the controlling temperature.}
 \label{Fig:Temp-Distr}
 \end{figure}
 
-\begin{figure}[!htp]
-\includegraphics[width=8.5cm]{plot_schematic_thermal_strain_IP.pdf}
-\includegraphics[width=8.5cm]{plot_schematic_thermal_strain_OP.pdf}
-\caption{Temperature distribution in thermomechanical fatigue test. (a) Variations of temperature at the upper and lower border of the measure region. (b) Deviations of the upper and lower temperature to the controlling temperature.}
-\label{Fig:plot_schematic_thermal_strain}
-\end{figure}
+% \begin{figure}[!htp]
+% \includegraphics[width=8.5cm]{plot_schematic_thermal_strain_IP.pdf}
+% \includegraphics[width=8.5cm]{plot_schematic_thermal_strain_OP.pdf}
+% \caption{Temperature distribution in thermomechanical fatigue test. (a) Variations of temperature at the upper and lower border of the measure region. (b) Deviations of the upper and lower temperature to the controlling temperature.}
+% \label{Fig:plot_schematic_thermal_strain}
+% \end{figure}
 
-Experiments were conducted on an MTS tension-torsion servo hydraulic test machine. Cooling is achieved by enforced air convection and heating is achieved by the induction heating device. The system is capable of applying both axial and biaxial loads with the temperature variation simultaneously. Thus, uniaxial or biaxial stress state can be generated under a given certain temperature range in the specimen. Also the test requirements from ASTM standard E2368 \cite{ASTM2014a} should be considered. Fig. \ref{Fig:Equipments} shows the induction heating system. The strains were measured using the high temperature axial and biaxial extensometers which contact the specimen surface with two ceramic rods. The gauge length of the axial-torsional extensometers is 25mm.
+Experiments were conducted on an MTS tension-torsion closed-loop servo hydraulic testing machine. Cooling is achieved by enforced air convection and heating is achieved by the induction heating device. The system is capable of applying both axial and biaxial loads with the temperature variation simultaneously. Thus, uniaxial or biaxial stress state can be generated under a given certain temperature range in the specimen. Also the test requirements from ASTM standard E2368 \cite{ASTM2014a} should be considered. Fig. \ref{Fig:Equipments} shows the induction heating system. The strains were measured using the high temperature axial and biaxial extensometers which contact the specimen surface with two ceramic rods. The gauge length of the axial-torsional extensometers is 25mm.
 
 \begin{figure}[!htp]
 \centering{\includegraphics[width=8.5cm]{Equipments.pdf}}
@@ -191,15 +196,18 @@ Experiments were conducted on an MTS tension-torsion servo hydraulic test machin
 \end{figure}
 
 \subsection{Fatigue tests}
-According to the standard ASTM E2368-10, a thermomechanical fatigue cycle requests uniform temperature and strain fields over the specimen gage section which vary simultaneously and independently under given loading conditions. In the present work the following factors may influence  experimental results:
+According to the standard ASTM E2368 \cite{ASTM2014a}, a thermomechanical fatigue cycle requests uniform temperature and strain fields over the specimen gage section which vary simultaneously and independently under given loading conditions. In the present work several factors may influence experimental results and the definitions are given as follows:
+
 \begin{itemize}
   \item {\em Thermal strain}, $\varepsilon_{th}$, is induced by temperature and assumed to be linear proportional to temperature increment, $\varepsilon_{th}=\alpha \Delta T$. The thermal strain is generally isotropic.
   \item {\em Mechanical strain}, $\varepsilon_{m}$, is resulting from applied load and directly related with material deformation and damage. Under tension-torsion loading conditions, the mechanical deformation in testing is characterized by the maximum principal strain.
   \item {\em Total strain}, $\varepsilon_t$, is measured by the extensometer and denotes the sum of the thermal and mechanical strains, $\varepsilon_t=\varepsilon_m+\varepsilon_{th}$. Since the fatigue loading amplitudes are generally small, strains are additive.
-  \item {\em Loading ratio}, $ R_{\varepsilon}=\varepsilon_{m,\min}/\varepsilon_{m,\max}$, denotes the ratio of the minimum mechanical strain over the maximum mechanical strain within a loading cycle. Under tension-torsion loading condition, the mechanical strains are the principal strains.
-  \item {\em Phase angle of the mechanical loading and thermal loading}, $\varphi$, represents the time difference between maximum values of both loads. For multi-axial cases the phase angle is oriented to the principal strain.
+  \item {\em Loading ratio}, $R_{\varepsilon}=\varepsilon_{m,\min}/\varepsilon_{m,\max}$, denotes the ratio of the minimum mechanical strain over the maximum mechanical strain within a loading cycle. Under axial-torsional loading condition, the mechanical strains are the principal strains.
+  \item {\em Phase angle of the thermal loading and mechanical loading}, $\theta_{T-\varepsilon}$, represents the time difference between maximum values of temperature and mechanical strain. %For multi-axial cases the phase angle is oriented to the principal strain.
+  \item {\em Phase angle of the thermal loading and torsinal loading}, $\theta_{T-\gamma}$, represents the time difference between maximum values of temperature and shear strain.
+  \item {\em Phase angle of the mechanical loading and torsinal loading}, $\theta_{\varepsilon-\gamma}$, represents the time difference between maximum values of mechanical strain and shear strain.
+  \item {\em Equivalent mechanical strain}, $\varepsilon_{eq}=\sqrt {\varepsilon _m^2 + {\gamma ^2}/3}$, is calculated by the von Mises relation\cite{Pol1991Cyclic}.
 \end{itemize}
-
 
 \begin{figure}
   \begin{minipage}[t]{0.5\linewidth}
@@ -231,17 +239,29 @@ According to the standard ASTM E2368-10, a thermomechanical fatigue cycle reques
   \label{Fig:LoadPath}
 \end{figure}
 
-
 \begin{figure}[!htp]
 \centering{\includegraphics[width=8.5cm]{plot_elastic_by_temperature_in718.pdf}}
 \caption{Elastic material property as a function of temperature. \marked{The vertical axis has to be changed.}}
 \label{Fig:plot_elastic_by_temperature_in718}
 \end{figure}
 
-Fatigue tests were performed in air and under mechanical strain control with three different strain paths. The multi-axial fatigue tests ran under given axial strain $\varepsilon$ and shear strain $\gamma$ in a cycle. The proportional and the non-proportional loading paths are shown in Figures \ref{Fig:LoadPath}. While Fig. \ref{Fig:LoadPath} (b) shows a proportional load,  Figs. \ref{Fig:LoadPath} (c) and (d) define two non-proportional loads, with very different characteristics.
-Loading ratio $R_\varepsilon$ means the ratio of minimum mechanical strain to the maximum mechanical strain in a loading cycle. Under the tension-torsion condition, the loading ratio is calculated from the principal strains.
+All fatigue tests were performed in the temperature interval from 300$^\circ$C to 650$^\circ$C under mechanical strain control with fully reversed mechanical strain loading $R_{\varepsilon}=-1$. The experimental conditions of multi-axial thermomechanical fatigue tests are summarized in Table \ref{Tab:TestMatrix} with respect to testing parameters such as test type, mechanical and torsional strain amplitudes, equivalent strain amplitude and rates as well as phase shifts between mechanical strain, shear strain and temperature. All tests were carried out in air. Fig. \ref{Fig:LoadPath} shows schematically three strain paths for uniaxial tension/compression (Fig. \ref{Fig:LoadPath}(a)), proportional (Fig. \ref{Fig:LoadPath}(b)), and non-proportional (Fig. \ref{Fig:LoadPath}(c)) tests. Fig. \ref{Fig:LoadPath}(b) represents a 45$^\circ$ proportional loading with the ratio $\varepsilon_{m}/(\gamma/\sqrt{3})=1$. While Fig. \ref{Fig:LoadPath}(c) shows a diamond non-proportional strain path (i.e. the ratio of mechanical strain amplitude and shear strain amplitude is 1). Loading ratio $R_\varepsilon$ means the ratio of minimum mechanical strain to the maximum mechanical strain in a loading cycle. Under the axial-torsional condition, the loading ratio is calculated from the principal strains. It should be noted that the thin-walled tubular specimen is used in this study. 
+In the tubular specimen, the shear strain and shear stress are not constant in the cross-section, and the shear stress and shear strain are always the greatest at the outer diameter.
+Under elasto-plastic loading conditions, shear stress varies nonlinearly through the thin wall of the tubular specimen.
+Therefore, according to ASTM E2207 \cite{ASTM2014}, the assumption of a uniformly distributed shear stress is recommended.
+The shear stresses reported in this study are calculated dependent on the assumption as:
+\begin{equation}
+\tau=\frac{16T}{\pi(d_o^2-d_i^2)(d_o+d_i)},
+\end{equation}
+where, $T$ is the torsional moment, $\tau$ is the shear stress, $d_o$ and $d_i$ are the outer and inner diameters of the thin-walled hollow specimen, respectively. 
+The effect of temperature variation on shear strain measurement can be neglected, according to Ref. \cite{Bakis2014}. Consequently, the compensation of torsional thermal strain is not performed in the present work. The shear strains are obtained directly from the measurement results by the extensometer.
+%$N_f$ was defined as number of cycles at failure, i.e. $N_f$ represents the last cycle.$N_f$
 
-In comparing with isothermal fatigue, the thermomechanical fatigue is conducted under varying temperature, as shown in Fig. \ref{Fig:Temp-Distr}, in which the thermomechanical loads are characterized additionally by the phase angle, $\varphi$. In the present work, the temperature cycled from $T_{min}=300^\circ$C to $T_{max}=650^\circ$C at a heating/cooling rates of 3.89K/s with the constant ramp rates forming a triangular cycle. The test matrix for the present work is summarized in Table \ref{Tab:TestMatrix}, with both varying loading amplitudes and different phase angles. Effects of the loading proportionality is an additional issue to be clarified experimentally.
+%The multi-axial fatigue tests ran under given axial strain $\varepsilon$ and shear strain $\gamma$ in a cycle. The proportional and the non-proportional loading paths are shown in Figures \ref{Fig:LoadPath}. While Fig. \ref{Fig:LoadPath} (b) shows a proportional load,  Figs. \ref{Fig:LoadPath} (c) and (d) define two non-proportional loads, with very different characteristics. Loading ratio $R_\varepsilon$ means the ratio of minimum mechanical strain to the maximum mechanical strain in a loading cycle. Under the tension-torsion condition, the loading ratio is calculated from the principal strains.
+
+Temperature was measured with three chromel-alumel (type K) thermocouples wrapped around the specimen. 
+
+In comparison with isothermal fatigue test, the thermomechanical fatigue test is carried out under varying temperature, as shown in Fig. \ref{Fig:Temp-Distr}, in which the thermomechanical loads are characterized additionally by the phase angle, $\varphi$. In the present work, the temperature cycled from $T_{min}=300^\circ$C to $T_{max}=650^\circ$C at a heating/cooling rates of 3.89K/s with the constant ramp rates forming a triangular cycle. The test matrix for the present work is summarized in Table \ref{Tab:TestMatrix}, with both varying loading amplitudes and different phase angles. Effects of the loading proportionality is an additional issue to be clarified experimentally.
 
 The mechanical strain component ($\varepsilon_{m}$) resulting when the free expansion thermal strain component ($\varepsilon_{th}$) is subtracted from the total strain ($\varepsilon_{t}$). In order to account for the thermal expansion during the tests, each specimen was heated by the induction heating device to the intended thermal cycle of the experiment under the  stress free condition before TMF tests. Under this condition the specimen can expand freely and the thermal expansion was measured directly.
 Figure \ref{Fig:plot_elastic_by_temperature_in718} shows variations of elasticity modulus, shear modulus and Poisson's ratio as functions of temperature. The curves are independent of mechanical loading.
@@ -370,12 +390,6 @@ where ${{{\sigma '}_f}}$ is the fatigue strength coefficient, $b$ is the fatigue
 \caption{Manson-Coffin plots of the TMF fatigue tests.}
 \label{Fig:plot_exp_fatigue_life}
 \end{figure}
-
-XXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-\marked{(My correction ended here. The following paragraphs have to be re-arranged. Please do following for me at first:
-1. Cite each figure in the text and write at least 3 sentences for each figure. 2. Make your contents line and write your text following this line. 3. I would see more results of isothermal results, before you discuss TFM. In the present version there is no isothermal results. 4. More references are necessary, especially for the IN718.)}
-
 
 Fatigue tests with three different loading paths should give a systematical overview about the thermomechanical behavior of the material. Under strain-controlled uniaxial cyclic loading with mean mechanical strain, both IP and OP TMF results show the cyclic softening behavior as well as the hysteresis loops reaches a stable state with increasing number of cycles. The difference between IP and OP TMF stress-strain variations was observed that a mean stress decreasing during the IP TMF tests but increasing during the OP TMF tests. The proportional path IP TMF test shows the similar cyclic softening behavior of the uniaxial IP TMF tests. Also a mean stress decreasing was investigated in both axial and hoop directions.
 
