@@ -48,7 +48,7 @@
 \newcommand{\marked}[1]{\textcolor{red}{#1}}
 
 %\bibliographystyle{elsarticle-num}
-\graphicspath{{F:/Cloud/GitHub/fatigue/figs/}{F:/Cloud/GitHub/doctor/figs/python/}{F:/Cloud/GitHub/doctor/figs/ppt/}{F:/Cloud/GitHub/doctor/figs/sem/}}
+\graphicspath{{F:/Cloud/GitHub/fatigue/figs/}{F:/Cloud/GitHub/doctor/figs/python/}{F:/Cloud/GitHub/doctor/figs/ppt/}{F:/Cloud/GitHub/doctor/figs/sem/}{F:/Cloud/Database/IN718/SEM/}}
 
 \journal{International Journal of Fatigue}
 
@@ -437,7 +437,7 @@ At the mechanical strain amplitude bigger than 0.6\%, the in-phase thermomechani
 
 Fatigue tests with three different phase angles of the thermal loading and mechanical loading should give a systematical overview about the thermomechanical behavior of the material. Fig. \ref{Fig:plot_exp_TCTMF} illustrates the evolution of the peak, valley and mean stresses for TC-IP, TC-OP and TC-90 loading tests. As expected, under strain-controlled uniaxial cyclic loading with mean mechanical strain, all fatigue tests show the cyclic softening behavior as well as the hysteresis loops reach a stable state with increasing number of cycles. The decreases of mean stresses were observed during the TC-IP loading tests, whereas for TC-OP loading the opposite is the case. Furthermore, due to the symmetry of temperature in the TC-90 loading (i.e. the temperatures are the same at maximum and minimum axial strain), the mean axial stress is constant during the entire life-cycle process.
 
-As shown in Fig. \ref{Fig:plot_exp_PROTMF}, the experimental results of the PRO-IP loading tests show the similar cyclic softening behavior of the uniaxial TC-IP tests and the shear stress response is consistent with the axial stress response. In Fig. \ref{Fig:plot_exp_PROTMF} (b) and (c), a decrease of mean stress was present in both axial and hoop directions.
+As shown in Fig. \ref{Fig:plot_exp_PROTMF}, the experimental results of the PRO-IP loading tests show the similar cyclic softening behavior of the uniaxial TC-IP tests and the shear stress response is consistent with the axial stress response. In Fig. \ref{Fig:plot_exp_PROTMF}(b) and (c), a decrease of mean stress was present in both axial and hoop directions.
 
 
 Fig. \ref{Fig:plot_exp_NPRTMF} shows the experimental results of NPR-IP loading tests. Unlike the results of PRO-IP loading tests, for equivalent strain amplitudes $\geqslant$0.8\%, cyclic hardening was present in the first three cycles in both axial and torsional directions. Afterwards, continuous cyclic softening follows for the major part of the fatigue life. Furthermore, compared to the PRO-IP data, both axial and shear stress amplitudes due to the same equivalent strain amplitudes are higher than the case of PRO-IP loading tests, as shown in Fig. \ref{Fig:plot_exp_NPRTMF}(b) and (c). Consequently, it was concluded that the additional non-proportional hardening occured in the mechanical non-proportional loading condition. In Fig. \ref{Fig:plot_exp_NPRTMF}(c), unlike the case of axial stress, the changes of mean value of shear stress under NPR-IP loading are tiny.
@@ -452,7 +452,7 @@ Fig. \ref{Fig:plot_exp_NPRTMF} shows the experimental results of NPR-IP loading 
 
 \subsection{Fractography under different loadings conditions}
 In Fig. \ref{Fig:crack_initiation}, for both isothermal and thermomechanical loadings, crack initiation and subsequent failure has been identified as being initiated at the outer surface of the specimen.
-Scanning electron microscopy (SEM) investigations reveal that the dominant fracture mechanism is changing with the phase angle of the thermal loading and mechanical loading, $\theta_{T-\varepsilon}$, as well as the mechanical loading path. Fig. \ref{Fig:crack_propagation}(a), (b) and (d)shows that intergranular fracture is more evident under in phase thermomechanical loading tests. However, Fig. \ref{Fig:crack_propagation}(c) shows that transgranular fracture plays a dominant role under out of phase thermomechanical loading tests. Consequently, it was concluded that the simultaneously high tensile stress and high temperature   
+Scanning electron microscopy (SEM) investigations reveal that the dominant fracture mechanism is changing with the phase angle of the thermal loading and mechanical loading, $\theta_{T-\varepsilon}$, as well as the mechanical loading path. Fig. \ref{Fig:crack_propagation}(a), (b) and (d) shows that intergranular fracture is more evident under in phase thermomechanical loading tests. However, Fig. \ref{Fig:crack_propagation}(c) shows that transgranular fracture plays a dominant role under out of phase thermomechanical loading tests. Consequently, it can be concluded that the intergranular fracture occurs mainly when high tensile stress and high temperature act simultaneously. However, under out of phase thermomechanical loadings, no visible morphology of grain boundaries is observed and the fatigue striations are very evident, which means that the creep damage can be ignored in such two loading conditions.
 
 \begin{figure}
    \centering
@@ -547,9 +547,9 @@ Scanning electron microscopy (SEM) investigations reveal that the dominant fract
   \begin{minipage}[t]{0.5\linewidth} % 如果一行放2个图，用0.5，如果3个图，用0.33\
   \nonumber
     \centering
-    \begin{overpic}[width=8.0cm]{7033-16.jpg}
+    \begin{overpic}[width=8.0cm]{7033-103.jpg}
       \put(0,65){\fcolorbox{white}{white}{(c)}}
-      \put(50,50){\color{white}\thicklines\vector(-1,1){20}}
+      \put(50,50){\color{white}\thicklines\vector(-1,2){10}}
     \end{overpic}
   \end{minipage}%
   \begin{minipage}[t]{0.5\linewidth}
@@ -708,11 +708,16 @@ $T_N$ equals 1 when mean experimental and calculated fatigue lives are equal; mo
 \end{figure}
 
 \section{Conlusions}
-This paper has described the experimental facility of a non-proportional thermomechanical fatigue test. The machine had to be carefully calibrated from its original design to improve the thermal gradient and ensure the control stability of the axial-torsional extensometers.
-A summary of the important mechanical test results is:
-The uniaxial out of phase OP TMF test has a longer lifetime than the uniaxial in phase IP test within the Mises equivalent mechanical strain amplitude range from 0.5\% to 1\%.
-Fatigue lives are strongly influenced by the strain path. At the same equivalent mechanical strain and the same in phase IP temperature conditions, the non-proportional diamond path test has a shorter lifetime than the uniaxial and 45$^\circ$ proportional path test.
 
+This paper has described the experimental facility of non-proportional thermomechanical fatigue tests. The machine had to be carefully calibrated from its original design to improve the thermal gradient and ensure the control stability of the axial-torsional extensometers. The Nickel-based superalloy Inconel 718 was investigated experimentally and computationally under 650$^\circ$C isothermal and 300$^\circ$C to 650$^\circ$C thermomechanical loading conditions with proportional and non-proportional mechanical strain paths. The main conclusions are as follows:
+
+% A summary of the important mechanical test results is:
+
+The TC-OP tests have a longer lifetime than the TC-IP tests within the Mises equivalent mechanical strain amplitude range from 0.6\% to 1\%.
+
+TMF lifetimes are strongly influenced by the strain path. At the same equivalent mechanical strain amplitude and the same in phase temperature conditions, the NPR-IP tests have a shorter lifetime than the lifetime of TC-IP tests. However, the PRO-IP tests have the longest lifetime.
+
+MasonFatigue parameters are determined on the isothermal fatigue tests.
 The life predictions from the known fatigue models are unsatisfactory. The plots contains generally large scatterings, which implies improper fatigue variables in the models.
 A TMF life prediction model has to consider influences from varying temperature as well as the non-proportional loads. The TMF life prediction is still an open issue.
 
