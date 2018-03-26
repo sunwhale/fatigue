@@ -48,9 +48,9 @@
 \newcommand{\marked}[1]{\textcolor{red}{#1}}
 
 %\bibliographystyle{elsarticle-num}
-% \graphicspath{{F:/Cloud/GitHub/fatigue/figs/}{F:/Cloud/GitHub/doctor/figs/python/}{F:/Cloud/GitHub/doctor/figs/ppt/}{F:/Cloud/GitHub/doctor/figs/sem/}{F:/Cloud/Database/IN718/SEM/}}
+\graphicspath{{F:/Cloud/GitHub/fatigue/figs/}{F:/Cloud/GitHub/doctor/figs/python/}{F:/Cloud/GitHub/doctor/figs/ppt/}{F:/Cloud/GitHub/doctor/figs/sem/}{F:/Cloud/Database/IN718/SEM/}}
 
-\graphicspath{{figures/}}
+% \graphicspath{{figures/}}
 
 \journal{International Journal of Fatigue}
 
@@ -695,7 +695,36 @@ strain range
 \label{Fig:NF-NP-TMF-Chu}
 \end{figure}
 
+\subsection{Our Strain Energy Models}
+\begin{eqnarray*}
+A{\left( {\Delta {\sigma _n}\Delta {\varepsilon _n}} \right)_{\max }} + B\left( {\Delta \tau \Delta \gamma } \right) &=& \frac{{4{{\sigma '}_f}^2}}{E}{\left( {2{N_f}} \right)^{2b}}
+\\
+& & + 4{{\sigma '}_f}{{\varepsilon '}_f}{\left( {2{N_f}} \right)^{b + c}}
+\end{eqnarray*}
 
+\begin{equation}
+A = {\left[ {1 + C\int_{{t_0}}^{{t_0} + {t_{cyc}}} {\eta \left( t \right)\exp \left( {\frac{{ - Q\left( t \right)}}{{RT\left( t \right)}}} \right)dt} } \right]^k}
+\end{equation}
+
+\begin{equation}
+Q\left( t \right) = {Q_0} - \upsilon _0^*{\sigma _n}\left( t \right)\left( {1 - \frac{{{\sigma _n}\left( t \right)}}{{2{\sigma _{ult}}}}} \right)
+\end{equation}
+
+\begin{equation}
+B = 0.5
+\end{equation}
+
+$R=8.31\times10^{-3}$kJ/mol$\cdot$K
+
+$Q_0 = 240$kJ/mol
+
+$\upsilon _0^* = 3.75\times10^{-4}\rm{m}^{3}/\rm{mol}$
+
+$\sigma_{ult} = 1300$MPa
+
+$k = 1.2$
+
+$C=1.2\times10^{12}\rm{s}^{-1}$
 
 \marked{Fig. \ref{Fig:plot_fatigue_life_quantitative_evaluation_tmf} shows a quantitative assessment of fatigue life prediction results. The comparison
 between calculated Ncal and experimental Nexp fatigue lives has been made by means of two statistical parameters.
