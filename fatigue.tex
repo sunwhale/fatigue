@@ -545,14 +545,14 @@ Consequently, it can be concluded that the intergranular fracture occurs mainly 
   \nonumber
     \centering
     \begin{overpic}[width=8.0cm]{7112-4.jpg}
-      \put(0,65){\fcolorbox{white}{white}{(a)}}
+      \put(0,65){\fcolorbox{white}{white}{(a) TC-IF}}
       \put(50,50){\color{white}\thicklines\vector(-1,-1){20}}
     \end{overpic}
   \end{minipage}%
   \begin{minipage}[t]{0.5\linewidth}
     \centering
     \begin{overpic}[width=8.0cm]{7047-8.jpg}
-      \put(0,65){\fcolorbox{white}{white}{(b)}}
+      \put(0,65){\fcolorbox{white}{white}{(b) TC-IP}}
       \put(50,50){\color{white}\thicklines\vector(-1,-1){20}}
     \end{overpic}
   \end{minipage}
@@ -561,14 +561,14 @@ Consequently, it can be concluded that the intergranular fracture occurs mainly 
   \nonumber
     \centering
     \begin{overpic}[width=8.0cm]{7033-102.jpg}
-      \put(0,65){\fcolorbox{white}{white}{(c)}}
+      \put(0,65){\fcolorbox{white}{white}{(c) TC-OP}}
       \put(50,50){\color{white}\thicklines\vector(-1,2){10}}
     \end{overpic}
   \end{minipage}%
   \begin{minipage}[t]{0.5\linewidth}
     \centering
     \begin{overpic}[width=8.0cm]{7040-6.jpg}
-      \put(0,65){\fcolorbox{white}{white}{(d)}}
+      \put(0,65){\fcolorbox{white}{white}{(d) PRO-IP}}
       \put(50,30){\color{white}\thicklines\vector(-1,-1){20}}
     \end{overpic}
   \end{minipage}
@@ -577,19 +577,19 @@ Consequently, it can be concluded that the intergranular fracture occurs mainly 
   \nonumber
     \centering
     \begin{overpic}[width=8.0cm]{7046-9.jpg}
-      \put(0,65){\fcolorbox{white}{white}{(e)}}
+      \put(0,65){\fcolorbox{white}{white}{(e) NPR-IP}}
       \put(30,30){\color{white}\thicklines\vector(1,2){10}}
     \end{overpic}
   \end{minipage}%
   \begin{minipage}[t]{0.5\linewidth}
     \centering
     \begin{overpic}[width=8.0cm]{7036-5.jpg}
-      \put(0,65){\fcolorbox{white}{white}{(f)}}
+      \put(0,65){\fcolorbox{white}{white}{(f) NPR-IP}}
       \put(30,30){\color{white}\thicklines\vector(2,1){20}}
     \end{overpic}
   \end{minipage}%
 
-  \caption{Observation of fatigue striations on fractures surface: (a)TC-IF 0.45\%, (b)TC-IP 0.6\%, (c)TC-OP 0.65\%, (d)PRO-IP 0.6\%, (e)NPR-IP 0.7\%, (f)NPR-IP 0.5\%}
+  \caption{Observation of fatigue striations on fractures surface: (a)TC-IF 0.45\%, (b)TC-IP 0.6\%, (c)TC-OP 0.65\%, (d)PRO-IP 0.6\%, (e)NPR-IP 0.7\%, (f)NPR-IP 0.5\%.  Arrows show the crack propagation direction.}
   \label{Fig:crack_propagation}
 \end{figure*}
 
@@ -610,17 +610,10 @@ with
 \[A = 1 + {\nu _e} + \left( {1 - {\nu _e}} \right)S,\]
 and
 \[B = 1 + {\nu _p} + \left( {1 - {\nu _p}} \right)S.\]
-\begin{figure}[!htp]
-\centering{\includegraphics[width=8.5cm]{NF-NP-TMF-BM.pdf}}
-\caption{Brown-Miller Model.}
-\label{Fig:NF-NP-TMF-BM}
-\end{figure}
 
 \subsection{Fatemi-Socie Model}
 Based on the work of Brown and Miller, Fatemi and Socie \cite{Fatemi1988} proposed that the normal strain term in Equation (\ref{Equ:ShearStrainBM}) should be replaced by the normal stress.
 The equivalent shear strain amplitude is developed as:
-%\begin{equation}
-%\end{equation}
 \begin{equation}
 \frac{{\Delta \hat \gamma }}{2} = \frac{{\Delta {\gamma _{\max }}}}{2}\left( {1 + k\frac{{{\sigma _{n,max}}}}{{{\sigma _y}}}} \right),
 \end{equation}
@@ -641,22 +634,12 @@ k_0 =  {\frac{{\frac{{{{\tau '}_f}}}{G}{{\left( {2{N_f}} \right)}^{{b_0}}} + {{\
 
 %where the equivalent shear strain on the critical plane was based on a combination of the maximum shear strain amplitude $\Delta \gamma$ and maximum normal stress $\sigma _{n,max}$ during the cycle. The shear strain was used as the variable decisive for the rain-flow decomposition.
 %The criterion used to be based on the MSSR maximization.
-\begin{figure}[!htp]
-\centering{\includegraphics[width=8.5cm]{NF-NP-TMF-FS.pdf}}
-\caption{Fatemi-Socie Model.}
-\label{Fig:NF-NP-TMF-FS}
-\end{figure}
 
 \subsection{Smith-Watson-Topper Model}
 SWT parameter is based on the principal strain range Š€ŠÅ1 and the maximum stress on the plane of the principal
 strain range
 
 \[{\sigma _{n,max}}\frac{{\Delta \varepsilon }}{2} = \frac{{{{\sigma '}_f}^2}}{E}{\left( {2{N_f}} \right)^{2b}} + {\sigma '_f}{\varepsilon '_f}{\left( {2{N_f}} \right)^{b + c}}\]
-\begin{figure}[!htp]
-\centering{\includegraphics[width=8.5cm]{NF-NP-TMF-SWT.pdf}}
-\caption{Smith-Watson-Topper Model.}
-\label{Fig:NF-NP-TMF-SWT}
-\end{figure}
 
 \subsection{Liu's Strain Energy Models}
 \begin{eqnarray*}
@@ -665,23 +648,11 @@ strain range
 & & + 4{{\sigma '}_f}{{\varepsilon '}_f}{\left( {2{N_f}} \right)^{b + c}}
 \end{eqnarray*}
 
-\begin{figure}[!htp]
-\centering{\includegraphics[width=8.5cm]{NF-NP-TMF-Liu1.pdf}}
-\caption{Liu Tension Strain Energy Model.}
-\label{Fig:NF-NP-TMF-Liu}
-\end{figure}
-
 \begin{eqnarray*}
 \left( {\Delta {\sigma _n}\Delta {\varepsilon _n}} \right) + {\left( {\Delta \tau \Delta \gamma } \right)_{\max }} &=& \frac{{4{{\tau '}_f}^2}}{G}{\left( {2{N_f}} \right)^{2b\gamma }}
 \\
 && + 4{{\tau '}_f}{{\gamma '}_f}{\left( {2{N_f}} \right)^{b\gamma  + c\gamma }}
 \end{eqnarray*}
-
-\begin{figure}[!htp]
-\centering{\includegraphics[width=8.5cm]{NF-NP-TMF-Liu2.pdf}}
-\caption{Liu Shear Strain Energy Model.}
-\label{Fig:NF-NP-TMF-Liu2}
-\end{figure}
 
 \subsection{Chu Strain Energy Model}
 \begin{eqnarray*}
@@ -689,11 +660,88 @@ strain range
 && + 1.04{{\sigma '}_f}{{\varepsilon '}_f}{\left( {2{N_f}} \right)^{b + c}}
 \end{eqnarray*}
 
-\begin{figure}[!htp]
-\centering{\includegraphics[width=8.5cm]{NF-NP-TMF-Chu.pdf}}
-\caption{Chu Strain Energy Model.}
-\label{Fig:NF-NP-TMF-Chu}
-\end{figure}
+\begin{figure*}
+  \begin{minipage}[t]{0.5\linewidth} % 如果一行放2个图，用0.5，如果3个图，用0.33\
+  \nonumber
+    \centering
+    \begin{overpic}[width=7.5cm]{NF-NP-TMF-BM.pdf}
+      \put(70,20){\fcolorbox{white}{white}{(a) BM}}
+    \end{overpic}
+  \end{minipage}%
+  \begin{minipage}[t]{0.5\linewidth}
+    \centering
+    \begin{overpic}[width=7.5cm]{NF-NP-TMF-FS.pdf}
+      \put(70,20){\fcolorbox{white}{white}{(b) FS}}
+    \end{overpic}
+  \end{minipage}
+
+  \begin{minipage}[t]{0.5\linewidth} % 如果一行放2个图，用0.5，如果3个图，用0.33\
+  \nonumber
+    \centering
+    \begin{overpic}[width=7.5cm]{NF-NP-TMF-SWT.pdf}
+      \put(70,20){\fcolorbox{white}{white}{(c) SWT}}
+    \end{overpic}
+  \end{minipage}%
+  \begin{minipage}[t]{0.5\linewidth}
+    \centering
+    \begin{overpic}[width=7.5cm]{NF-NP-TMF-Chu.pdf}
+      \put(70,20){\fcolorbox{white}{white}{(d) Chu}}
+    \end{overpic}
+  \end{minipage}
+
+  \begin{minipage}[t]{0.5\linewidth} % 如果一行放2个图，用0.5，如果3个图，用0.33\
+  \nonumber
+    \centering
+    \begin{overpic}[width=7.5cm]{NF-NP-TMF-Liu1.pdf}
+      \put(70,20){\fcolorbox{white}{white}{(e) Liu I}}
+    \end{overpic}
+  \end{minipage}%
+  \begin{minipage}[t]{0.5\linewidth}
+    \centering
+    \begin{overpic}[width=7.5cm]{NF-NP-TMF-Study.pdf}
+      \put(70,20){\fcolorbox{white}{white}{(f) Study}}
+    \end{overpic}
+  \end{minipage}
+
+  \caption{Observation of fatigue striations on fractures surface: (a)TC-IF 0.45\%, (b)TC-IP 0.6\%, (c)TC-OP 0.65\%, (d)PRO-IP 0.6\%, (e)NPR-IP 0.7\%, (f)NPR-IP 0.5\%}
+  \label{Fig:life_prediction}
+\end{figure*}
+
+% \begin{figure}[!htp]
+% \centering{\includegraphics[width=8.5cm]{NF-NP-TMF-BM.pdf}}
+% \caption{Brown-Miller Model.}
+% \label{Fig:NF-NP-TMF-BM}
+% \end{figure}
+
+% \begin{figure}[!htp]
+% \centering{\includegraphics[width=8.5cm]{NF-NP-TMF-FS.pdf}}
+% \caption{Fatemi-Socie Model.}
+% \label{Fig:NF-NP-TMF-FS}
+% \end{figure}
+
+% \begin{figure}[!htp]
+% \centering{\includegraphics[width=8.5cm]{NF-NP-TMF-SWT.pdf}}
+% \caption{Smith-Watson-Topper Model.}
+% \label{Fig:NF-NP-TMF-SWT}
+% \end{figure}
+
+% \begin{figure}[!htp]
+% \centering{\includegraphics[width=8.5cm]{NF-NP-TMF-Liu1.pdf}}
+% \caption{Liu Tension Strain Energy Model.}
+% \label{Fig:NF-NP-TMF-Liu}
+% \end{figure}
+
+% \begin{figure}[!htp]
+% \centering{\includegraphics[width=8.5cm]{NF-NP-TMF-Liu2.pdf}}
+% \caption{Liu Shear Strain Energy Model.}
+% \label{Fig:NF-NP-TMF-Liu2}
+% \end{figure}
+
+% \begin{figure}[!htp]
+% \centering{\includegraphics[width=8.5cm]{NF-NP-TMF-Chu.pdf}}
+% \caption{Chu Strain Energy Model.}
+% \label{Fig:NF-NP-TMF-Chu}
+% \end{figure}
 
 \subsection{Our Strain Energy Models}
 \begin{eqnarray*}
