@@ -13,6 +13,7 @@
 \usepackage{color,soul}
 \usepackage{multirow}
 \usepackage{overpic}
+\usepackage{amsmath}
 % \usepackage{ctex}
 \usepackage{caption}
 
@@ -703,7 +704,7 @@ strain range
     \end{overpic}
   \end{minipage}
 
-  \caption{Observation of fatigue striations on fractures surface: (a)TC-IF 0.45\%, (b)TC-IP 0.6\%, (c)TC-OP 0.65\%, (d)PRO-IP 0.6\%, (e)NPR-IP 0.7\%, (f)NPR-IP 0.5\%}
+  \caption{Life prediction of multi-axial thermo-mechanical fatigue: (a)Brown-Miller Model, (b)Fatemi-Socie Model, (c) Smith-Watson-Topper Model, (d)Chu-Conle-Bonnen Model, (e)Liu Tension Energy Model, (f)Study Model.}
   \label{Fig:life_prediction}
 \end{figure*}
 
@@ -744,11 +745,24 @@ strain range
 % \end{figure}
 
 \subsection{Our Strain Energy Models}
-\begin{eqnarray*}
-A{\left( {\Delta {\sigma _n}\Delta {\varepsilon _n}} \right)_{\max }} + B\left( {\Delta \tau \Delta \gamma } \right) &=& \frac{{4{{\sigma '}_f}^2}}{E}{\left( {2{N_f}} \right)^{2b}}
-\\
-& & + 4{{\sigma '}_f}{{\varepsilon '}_f}{\left( {2{N_f}} \right)^{b + c}}
-\end{eqnarray*}
+% 由于热机械疲劳实验对设备要求较高并且需要耗费较多的人力、时间以及实验经费，目前为止材料的热机械疲劳数据相当有限。因此，如果能够采用相对容易实现的等温低周疲劳来预测热机械疲劳的寿命将产生巨大的经济效益。为了探索Inconel 718合金利用等温疲劳数据预测热机械寿命的可行性，在本研究中选取了几种常用的多轴疲劳寿命预测模型。在这一部分将着重介绍将等温疲劳数据代入上述三种模型中进行热机械疲劳寿命预测的结果并对其寿命预测能力进行比较。
+
+% 在本节中，对单轴等温和热机械疲劳测试以及所有应力状态下的双轴平面等温疲劳测试都给出了寿命预测。 因此，应用了文献的寿命模型，并提出了基于应力-应变方法的新的寿命模型。
+
+The experimental data of running time, stress, strain and temperature at half number of cycles to failure were used to determine lifetimes.
+
+A new lifetime model based on the Liu's Model I  virtual strain energy approach is presented as:
+\begin{equation}
+\begin{aligned}
+\left[ {A{{\left( {\Delta {\sigma _n}\Delta {\varepsilon _n}} \right)}_{\max }} + B\left( {\Delta \tau \Delta \gamma } \right)} \right]\left( {\frac{2}{{1 - {R_\sigma }}}} \right)\\
+= \frac{{4{{\sigma '}_f}^2}}{E}{\left( {2{N_f}} \right)^{2b}} + 4{{\sigma '}_f}{{\varepsilon '}_f}{\left( {2{N_f}} \right)^{b + c}},
+\end{aligned}
+\label{Equ:StudyModel}
+\end{equation}
+with
+\begin{equation}
+{R_\sigma } = \frac{{{\sigma _{n,\max }} - \Delta {\sigma _n}}}{{{\sigma _{n,\max }}}}.
+\end{equation}
 
 \begin{equation}
 A = {\left[ {1 + C\int_{{t_0}}^{{t_0} + {t_{cyc}}} {\eta \left( t \right)\exp \left( {\frac{{ - Q\left( t \right)}}{{RT\left( t \right)}}} \right)dt} } \right]^k}
