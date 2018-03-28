@@ -661,52 +661,52 @@ strain range
 && + 1.04{{\sigma '}_f}{{\varepsilon '}_f}{\left( {2{N_f}} \right)^{b + c}}
 \end{eqnarray*}
 
-\begin{figure*}
-  \begin{minipage}[t]{0.5\linewidth} % 如果一行放2个图，用0.5，如果3个图，用0.33\
-  \nonumber
-    \centering
-    \begin{overpic}[width=7.5cm]{NF-NP-TMF-BM.pdf}
-      \put(70,20){\fcolorbox{white}{white}{(a) BM}}
-    \end{overpic}
-  \end{minipage}%
-  \begin{minipage}[t]{0.5\linewidth}
-    \centering
-    \begin{overpic}[width=7.5cm]{NF-NP-TMF-FS.pdf}
-      \put(70,20){\fcolorbox{white}{white}{(b) FS}}
-    \end{overpic}
-  \end{minipage}
+% \begin{figure*}
+%   \begin{minipage}[t]{0.5\linewidth} % 如果一行放2个图，用0.5，如果3个图，用0.33\
+%   \nonumber
+%     \centering
+%     \begin{overpic}[width=7.5cm]{NF-NP-TMF-BM.pdf}
+%       \put(70,20){\fcolorbox{white}{white}{(a) BM}}
+%     \end{overpic}
+%   \end{minipage}%
+%   \begin{minipage}[t]{0.5\linewidth}
+%     \centering
+%     \begin{overpic}[width=7.5cm]{NF-NP-TMF-FS.pdf}
+%       \put(70,20){\fcolorbox{white}{white}{(b) FS}}
+%     \end{overpic}
+%   \end{minipage}
 
-  \begin{minipage}[t]{0.5\linewidth} % 如果一行放2个图，用0.5，如果3个图，用0.33\
-  \nonumber
-    \centering
-    \begin{overpic}[width=7.5cm]{NF-NP-TMF-SWT.pdf}
-      \put(70,20){\fcolorbox{white}{white}{(c) SWT}}
-    \end{overpic}
-  \end{minipage}%
-  \begin{minipage}[t]{0.5\linewidth}
-    \centering
-    \begin{overpic}[width=7.5cm]{NF-NP-TMF-Chu.pdf}
-      \put(70,20){\fcolorbox{white}{white}{(d) Chu}}
-    \end{overpic}
-  \end{minipage}
+%   \begin{minipage}[t]{0.5\linewidth} % 如果一行放2个图，用0.5，如果3个图，用0.33\
+%   \nonumber
+%     \centering
+%     \begin{overpic}[width=7.5cm]{NF-NP-TMF-SWT.pdf}
+%       \put(70,20){\fcolorbox{white}{white}{(c) SWT}}
+%     \end{overpic}
+%   \end{minipage}%
+%   \begin{minipage}[t]{0.5\linewidth}
+%     \centering
+%     \begin{overpic}[width=7.5cm]{NF-NP-TMF-Chu.pdf}
+%       \put(70,20){\fcolorbox{white}{white}{(d) CCB}}
+%     \end{overpic}
+%   \end{minipage}
 
-  \begin{minipage}[t]{0.5\linewidth} % 如果一行放2个图，用0.5，如果3个图，用0.33\
-  \nonumber
-    \centering
-    \begin{overpic}[width=7.5cm]{NF-NP-TMF-Liu1.pdf}
-      \put(70,20){\fcolorbox{white}{white}{(e) Liu I}}
-    \end{overpic}
-  \end{minipage}%
-  \begin{minipage}[t]{0.5\linewidth}
-    \centering
-    \begin{overpic}[width=7.5cm]{NF-NP-TMF-Study.pdf}
-      \put(70,20){\fcolorbox{white}{white}{(f) Study}}
-    \end{overpic}
-  \end{minipage}
+%   \begin{minipage}[t]{0.5\linewidth} % 如果一行放2个图，用0.5，如果3个图，用0.33\
+%   \nonumber
+%     \centering
+%     \begin{overpic}[width=7.5cm]{NF-NP-TMF-Liu1.pdf}
+%       \put(70,20){\fcolorbox{white}{white}{(e) Liu I}}
+%     \end{overpic}
+%   \end{minipage}%
+%   \begin{minipage}[t]{0.5\linewidth}
+%     \centering
+%     \begin{overpic}[width=7.5cm]{NF-NP-TMF-Study.pdf}
+%       \put(70,20){\fcolorbox{white}{white}{(f) Study}}
+%     \end{overpic}
+%   \end{minipage}
 
-  \caption{Life prediction of multi-axial thermo-mechanical fatigue: (a)Brown-Miller Model, (b)Fatemi-Socie Model, (c) Smith-Watson-Topper Model, (d)Chu-Conle-Bonnen Model, (e)Liu Tension Energy Model, (f)Study Model.}
-  \label{Fig:life_prediction}
-\end{figure*}
+%   \caption{Life prediction of multi-axial thermo-mechanical fatigue: (a)Brown-Miller Model, (b)Fatemi-Socie Model, (c) Smith-Watson-Topper Model, (d)Chu-Conle-Bonnen Model, (e)Liu Tension Energy Model, (f)Study Model.}
+%   \label{Fig:life_prediction}
+% \end{figure*}
 
 % \begin{figure}[!htp]
 % \centering{\includegraphics[width=8.5cm]{NF-NP-TMF-BM.pdf}}
@@ -744,49 +744,66 @@ strain range
 % \label{Fig:NF-NP-TMF-Chu}
 % \end{figure}
 
-\subsection{Our Strain Energy Models}
+\subsection{Proposed Strain Energy Models}
 % 由于热机械疲劳实验对设备要求较高并且需要耗费较多的人力、时间以及实验经费，目前为止材料的热机械疲劳数据相当有限。因此，如果能够采用相对容易实现的等温低周疲劳来预测热机械疲劳的寿命将产生巨大的经济效益。为了探索Inconel 718合金利用等温疲劳数据预测热机械寿命的可行性，在本研究中选取了几种常用的多轴疲劳寿命预测模型。在这一部分将着重介绍将等温疲劳数据代入上述三种模型中进行热机械疲劳寿命预测的结果并对其寿命预测能力进行比较。
 
 % 在本节中，对单轴等温和热机械疲劳测试以及所有应力状态下的双轴平面等温疲劳测试都给出了寿命预测。 因此，应用了文献的寿命模型，并提出了基于应力-应变方法的新的寿命模型。
 
 The experimental data of running time, stress, strain and temperature at half number of cycles to failure were used to determine lifetimes.
-
-A new lifetime model based on the Liu's Model I  virtual strain energy approach is presented as:
+Based on the above discussion of the experimental results, thermo-mechanical loading  will result in the evolution of the mean stress even for a mechanical strain ratio $R_{\varepsilon}=-1$. Therefore, the stress ratio ${R_\sigma }$ is defined as:
+\begin{equation}
+{R_\sigma } = \frac{{{\sigma _{n,\max }} - \Delta {\sigma _n}}}{{{\sigma _{n,\max }}}},
+\end{equation}
+as expected, under isothermal loading conditons ${R_\sigma }=-1$, under in-phase thermo-mechanical loading conditons ${R_\sigma }<-1$ and under out-of-phase thermo-mechanical loading conditons ${R_\sigma }>-1$.
+Socie \cite{Socie2000} proposed a Walker-like correction term\cite{Walker1970} to account the mean stress dependency for Liu's Model I virtual strain energy model as:
 \begin{equation}
 \begin{aligned}
-\left[ {A{{\left( {\Delta {\sigma _n}\Delta {\varepsilon _n}} \right)}_{\max }} + B\left( {\Delta \tau \Delta \gamma } \right)} \right]\left( {\frac{2}{{1 - {R_\sigma }}}} \right)\\
-= \frac{{4{{\sigma '}_f}^2}}{E}{\left( {2{N_f}} \right)^{2b}} + 4{{\sigma '}_f}{{\varepsilon '}_f}{\left( {2{N_f}} \right)^{b + c}},
+\left[ {{{\left( {\Delta {\sigma _n}\Delta {\varepsilon _n}} \right)}_{\max }} + \left( {\Delta \tau \Delta \gamma } \right)} \right]\left( {\frac{2}{{1 - {R_\sigma }}}} \right)\\
+= \frac{{4{{\sigma '}_f}^2}}{E}{\left( {2{N_f}} \right)^{2b}} + 4{{\sigma '}_f}{{\varepsilon '}_f}{\left( {2{N_f}} \right)^{b + c}}.
 \end{aligned}
 \label{Equ:StudyModel}
 \end{equation}
-with
+
+V\"{o}se \cite{Vose2013} proposed a phenomenological fatigue model to approach both isothermal and thermo-mechanical lifetime of Inconel 718. They introduced an Arrhenius-like time integral to decribe the viscous deformation effects as:
 \begin{equation}
-{R_\sigma } = \frac{{{\sigma _{n,\max }} - \Delta {\sigma _n}}}{{{\sigma _{n,\max }}}}.
+{\left( {1 + {C_5}\int {\exp \left[ {\frac{{ - Q}}{{RT}}} \right]} {\rm{d}}t} \right)^k}.
 \end{equation}
 
+% \begin{equation}
+% \begin{aligned}
+% \Delta {\varepsilon _{mech}}{\left( {1 - {R_\sigma }} \right)^{m - 1}}{2^{1 - m}}{\left( {1 + {C_5}\int {\exp \left[ {\frac{{ - Q}}{{RT}}} \right]} {\rm{d}}t} \right)^k}\\
+%  = {C_1}{\left( {{N_f}} \right)^{{C_2}}} + {C_3}{\left( {{N_f}} \right)^{{C_4}}}
+% \end{aligned}
+% \end{equation}
+
+A new lifetime model based on the Liu's Model I virtual strain energy approach is presented as:
 \begin{equation}
-A = {\left[ {1 + C\int_{{t_0}}^{{t_0} + {t_{cyc}}} {\eta \left( t \right)\exp \left( {\frac{{ - Q\left( t \right)}}{{RT\left( t \right)}}} \right)dt} } \right]^k}
+\begin{aligned}
+\left[ {A{{\left( {\Delta {\sigma _n}\Delta {\varepsilon _n}} \right)}_{\max }} + B\left( {\Delta \tau \Delta \gamma } \right)} \right]\left( {\frac{2}{{1 - {R_\sigma }}}} \right)\\
+= \frac{{4{{\sigma '}_f}^2}}{E}{\left( {2{N_f}} \right)^{2b}} + 4{{\sigma '}_f}{{\varepsilon '}_f}{\left( {2{N_f}} \right)^{b + c}}.
+\end{aligned}
+\label{Equ:StudyModel}
 \end{equation}
-
+In Eq. (\ref{Equ:StudyModel}), $A$ is a correction term according to the virtual tension strain energy ${{\left( {\Delta {\sigma _n}\Delta {\varepsilon _n}} \right)}_{\max }}$ and $B$ is a material constant in regard to the virtual shear strain energy ${\Delta \tau \Delta \gamma }$.
+As discussed in Ref. \cite{Vose2013}, the correction term A is defined as:
 \begin{equation}
-Q\left( t \right) = {Q_0} - \upsilon _0^*{\sigma _n}\left( t \right)\left( {1 - \frac{{{\sigma _n}\left( t \right)}}{{2{\sigma _{ult}}}}} \right)
+A = {\left[ {1 + C\int_{{t_0}}^{{t_0} + {t_{cyc}}} {\eta \left( t \right)\exp \left( {\frac{{ - Q\left( t \right)}}{{RT\left( t \right)}}} \right){\rm{d}}t} } \right]^k},
+\label{Equ:A}
 \end{equation}
-
+assuming that the viscous deformation only affects the tensile strain energy, where $\eta \left( t \right)$ is stress triaxiality, $R$ is the ideal gas constant ($8.31\times10^{-3}$kJ/mol$\cdot$K), the time integral is from the start time $t_0$ of the cycle to the end time $t_0 + t_{cyc}$, $t_{cyc}$ is the period of the tests, $C$ and $k$ are material constants.
+In Eq. \ref{Equ:A}, $Q$ is presented according to Ref. \cite{Warren2006,Warren2008} as:
 \begin{equation}
-B = 0.5
+Q\left( t \right) = {Q_0} - \upsilon _0^*{\sigma _n}\left( t \right)\left( {1 - \frac{{{\sigma _n}\left( t \right)}}{{2{\sigma _{ult}}}}} \right),
+\label{Equ:creep_activation_energy}
 \end{equation}
+where $Q_0$ is the the intrinsic activation energy, $\upsilon _0^*$ represents the intrinsic activation volume, $\sigma_{ult}$ is the ultimate stress at the maximum temperature and $\sigma_n(t)$ is the normal stress of the critical plane.
+As given in Ref. \cite{Warren2008}, the activation energy $Q_0$ is set to the value of 240kJ/mol and the intrinsic activation volume $\upsilon _0^*$ is used the value of $3.51\times10^{-4}\rm{m}^{3}/\rm{mol}$. The ultimate stress $\sigma_{ult}$ of Inconel 718 at 650 $^\circ$C is determined from the experiment as $1305$MPa. The constants $k$, $B$ and $C$ are determined by the optimization method to minimize the life prediction mean-squared error. Finally, $k$ is set to 1.2, $B$ is set to 0.5 and $C$ is set to $1.29\times10^{12}s^{-1}$.
 
-$R=8.31\times10^{-3}$kJ/mol$\cdot$K
-
-$Q_0 = 240$kJ/mol
-
-$\upsilon _0^* = 3.75\times10^{-4}\rm{m}^{3}/\rm{mol}$
-
-$\sigma_{ult} = 1300$MPa
-
-$k = 1.2$
-
-$C=1.2\times10^{12}\rm{s}^{-1}$
+% $Q_0$ = (240kJ/mol)
+% $\upsilon _0^*$ = ($3.75\times10^{-4}\rm{m}^{3}/\rm{mol}$)
+% $\sigma_{ult} = 1300$MPa
+% $k = 1.2$
+% $C=1.2\times10^{12}\rm{s}^{-1}$
 
 \marked{Fig. \ref{Fig:plot_fatigue_life_quantitative_evaluation_tmf} shows a quantitative assessment of fatigue life prediction results. The comparison
 between calculated Ncal and experimental Nexp fatigue lives has been made by means of two statistical parameters.
