@@ -795,7 +795,7 @@ Q\left( t \right) = {Q_0} - \upsilon _0^*{\sigma _{\rm n}}\left( t \right)\left(
 \label{Equ:creep_activation_energy}
 \end{equation}
 where $Q_0$ is the the intrinsic activation energy, $\upsilon _0^*$ represents the intrinsic activation volume, $\sigma_{\rm ult}$ is the ultimate stress at the maximum temperature and $\sigma_{\rm n}(t)$ is the normal stress of the critical plane.
-As given in \cite{Warren2008}, the activation energy $Q_0$ is set to the value of 240 kJ/mol and the intrinsic activation volume $\upsilon _0^*$ is used the value of $3.51\times10^{-4}$ $\rm{m}^{3}/\rm{mol}$. The ultimate strength $\sigma_{\rm ult}$ of Inconel 718 at 650$^\circ$C was measured under monotonic tensile tests as $1305$ MPa. The constants $k$, $B$ and $C$ are determined by the optimization method to minimize the life prediction mean-squared error. Finally, $k$ is set to 1.2, $B$ is set to 0.49 and $C$ is set to $1.29\times10^{12}$ s$^{-1}$.
+As given in \cite{Warren2008}, the activation energy $Q_0$ is set to the value of 240 kJ/mol and the intrinsic activation volume $\upsilon _0^*$ is used the value of $3.51\times10^{-4}$ $\rm{m}^{3}/\rm{mol}$. The ultimate strength $\sigma_{\rm ult}$ of Inconel 718 at 650$^\circ$C was measured under monotonic tensile tests as $1305$ MPa. The coefficients $k$, $B$ and $C$ are determined by the optimization method to minimize the life prediction mean-squared error. Finally, $k$ is set to 1.2, $B$ is set to 0.49, and $C$ is set to $1.29\times10^{12}$ s$^{-1}$.
 
 % $Q_0$ = (240kJ/mol)
 % $\upsilon _0^*$ = ($3.75\times10^{-4}\rm{m}^{3}/\rm{mol}$)
@@ -828,21 +828,35 @@ As given in \cite{Warren2008}, the activation energy $Q_0$ is set to the value o
 
 \marked{Fig. \ref{fig:PresentModel} shows the life assessment of the multiaxial TMF tests. In Fig. \ref{fig:PresentModel}(a), the fatigue damage parameters versus experimental fatigue lifetimes is displayed. The fatigue damage parameters show good correlation with experimental fatigue lifetimes under uniaxial TMF loading case as well as proportional and non-proportional TMF loading cases. In Fig. \ref{fig:PresentModel}(b), one can observe that based on the proposed model, most of the predicted fatigue lifetimes are within the scatter band with a factor of 2. It shows a good agreement with the experimental and predicted fatigue lifetimes.}
 
-\marked{Fig. \ref{Fig:plot_fatigue_life_quantitative_evaluation_tmf} shows a quantitative assessment of fatigue life prediction results. According to the references \cite{KAROLCZUK201439,WALAT201473,SKIBICKI201718}, the comparison between calculated $N_{\rm p}$ and experimental $N_{\rm f}$ fatigue lives have been made by means of two statistical parameters. The first of them is a mean dispersion of fatigue life:}
+\marked{Fig. \ref{Fig:plot_fatigue_life_quantitative_evaluation_tmf} shows a quantitative assessment of fatigue life prediction results. According to the references \cite{KAROLCZUK201439,WALAT201473,SKIBICKI201718}, two statistical parameters are used to evaluate the conformity of the predicted $N_{\rm p}$ and experimental $N_{\rm f}$ fatigue lives. The first parameter is a mean scatter of fatigue life:}
+\begin{equation}
+{T_{\rm N}} = {10^{\bar E}},
+\end{equation}
+where
+\begin{equation}
+\bar E = \frac{1}{n}\sum\limits_{i = 1}^n {\log \left( {\frac{{{N_{{\rm f},i}}}}{{{N_{{\rm p},i}}}}} \right)},
+\end{equation}
+where $n$ is the total number of the compared results, and the subscript $i$ indicates the ith result. The mean scatter is used to analyze the dispersion of fatigue life
 
-\[{T_{\rm N}} = {10^{\bar E}}\]
+The second parameter is a root mean square error of fatigue life:
+\begin{equation}
+{T_{\rm RMS}} = {10^{{E_{\rm RMS}}}},
+\end{equation}
+where $E_{\rm RMS}$ is defined as:
+\begin{equation}
+{E_{\rm RMS}} = \sqrt {\frac{1}{n}\sum\limits_{i = 1}^n {{{\log }^2}\left( {\frac{{{N_{{\rm f},i}}}}{{{N_{{\rm p},i}}}}} \right)} }.
+\end{equation}
+The root mean square error is applied to measure the differences between fatigue lives obtained from predictions and the results from experiments. 
 
-where $\bar E$ is given by:
 
-\[\bar E = \frac{1}{n}\sum\limits_{i = 1}^n {\log \left( {\frac{{{N_{{\rm f},i}}}}{{{N_{{\rm p},i}}}}} \right)} \]
-where n is a number of the compared results. The second parameter is a life prediction mean-squared error
 
-\[{T_{\rm RMS}} = {10^{{E_{\rm RMS}}}}\]
-where $E_{\rm RMS}$ is given by:
-\[{E_{\rm RMS}} = \sqrt {\frac{1}{n}\sum\limits_{i = 1}^n {{{\log }^2}\left( {\frac{{{N_{{\rm f},i}}}}{{{N_{{\rm p},i}}}}} \right)} } \]
+$T_{\rm RMS}$ equals to 1 when the mean and the statistical dispersion of experimental and computational life are identical.
 
 \marked{
-$T_{\rm N}$ equals 1 when mean experimental and calculated fatigue lives are equal; more than 1 when the experimental life values are higher than the calculated ones; lower than 1 when the experimental life values are lower than the calculated ones. The $T_{\rm N}$ quantity is insensitive to the dispersion of life. It can assume the same value for the results with low and high statistical dispersion. Quantity $T_{\rm RMS}$ is a measure of statistical dispersion. It assumes the value equal to 1 when the mean and the statistical dispersion of experimental and computational life are identical. It is higher than 1 in other cases. $T_{\rm RMS}$ does not provide any information on whether the computational life is higher or lower than the experimental one.}
+$T_{\rm N}$ equals 1 when mean experimental and calculated fatigue lives are equal; more than 1 when the experimental life values are higher than the calculated ones; lower than 1 when the experimental life values are lower than the calculated ones. The $T_{\rm N}$ quantity is insensitive to the dispersion of life. It can assume the same value for the results with low and high statistical dispersion. 
+
+
+Quantity $T_{\rm RMS}$ is a measure of statistical dispersion. It assumes the value equal to 1 when the mean and the statistical dispersion of experimental and computational life are identical. It is higher than 1 in other cases. $T_{\rm RMS}$ does not provide any information on whether the computational life is higher or lower than the experimental one.}
 
 \begin{figure}[!htp]
 \centering
@@ -878,4 +892,4 @@ This paper has described the experimental facility for non-proportional thermome
 % \bibliography{bibliography}          % personal bibliography file
 \bibliography{mybib}          % personal bibliography file
 
-\end{document} 
+\end{document}
