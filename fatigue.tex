@@ -50,11 +50,9 @@
 
 %\bibliographystyle{elsarticle-num}
 
-\graphicspath{{F:/Cloud/GitHub/doctor/figs/}{F:/Cloud/GitHub/doctor/figs/origin/}{F:/Cloud/GitHub/doctor/figs/tracepro/}{F:/Cloud/GitHub/doctor/figs/independent/}{F:/Cloud/GitHub/doctor/figs/python/}{F:/Cloud/GitHub/doctor/figs/ppt/}{F:/Cloud/GitHub/doctor/figs/svg/}{F:/Cloud/GitHub/doctor/figs/sem/}{F:/Cloud/GitHub/doctor/figs/test/}{F:/Cloud/Database/IN718/SEM/}{F:/Cloud/GitHub/fatigue/figs/}{F:/Cloud/GitHub/furnace/figs/}{F:/Cloud/GitHub/tmf/figs/}{F:/Cloud/GitHub/tgmf/figs/}}
+% \graphicspath{{F:/Cloud/GitHub/doctor/figs/}{F:/Cloud/GitHub/doctor/figs/origin/}{F:/Cloud/GitHub/doctor/figs/tracepro/}{F:/Cloud/GitHub/doctor/figs/independent/}{F:/Cloud/GitHub/doctor/figs/python/}{F:/Cloud/GitHub/doctor/figs/ppt/}{F:/Cloud/GitHub/doctor/figs/svg/}{F:/Cloud/GitHub/doctor/figs/sem/}{F:/Cloud/Database/IN718/SEM/}{F:/Cloud/GitHub/fatigue/figs/}}
 
-% \graphicspath{{F:/Cloud/GitHub/fatigue/figs/}{F:/Cloud/GitHub/doctor/figs/python/}{F:/Cloud/GitHub/doctor/figs/ppt/}{F:/Cloud/GitHub/doctor/figs/sem/}{F:/Cloud/Database/IN718/SEM/}}
-
-% \graphicspath{{}}
+\graphicspath{{figures/}}
 
 \journal{International Journal of Fatigue}
 
@@ -836,7 +834,7 @@ where
 \begin{equation}
 \bar E = \frac{1}{n}\sum\limits_{i = 1}^n {\log \left( {\frac{{{N_{{\rm f},i}}}}{{{N_{{\rm p},i}}}}} \right)},
 \end{equation}
-where $n$ is the total number of the compared results, and the subscript $i$ indicates the ith result. The mean scatter is used to analyze the dispersion of fatigue life
+\marked{where $n$ is the total number of the compared results, and the subscript $i$ indicates the ith result. The mean scatter illustrates the comparison of the mean value of experimental and predicted lives. $T_{\rm N} = 1$ shows the mean value of experimental and predicted lives are identical. $T_{\rm N} > 1$ means the predicted fatigue lives are conservative, and $T_{\rm N} < 1$ means the predicted fatigue lives are non-conservative. The statistical parameter $T_{\rm N}$ does not provide any information on the dispersion of fatigue life.}
 
 The second parameter is a root mean square error of fatigue life:
 \begin{equation}
@@ -846,17 +844,7 @@ where $E_{\rm RMS}$ is defined as:
 \begin{equation}
 {E_{\rm RMS}} = \sqrt {\frac{1}{n}\sum\limits_{i = 1}^n {{{\log }^2}\left( {\frac{{{N_{{\rm f},i}}}}{{{N_{{\rm p},i}}}}} \right)} }.
 \end{equation}
-The root mean square error is applied to measure the differences between fatigue lives obtained from predictions and the results from experiments. 
-
-
-
-$T_{\rm RMS}$ equals to 1 when the mean and the statistical dispersion of experimental and computational life are identical.
-
-\marked{
-$T_{\rm N}$ equals 1 when mean experimental and calculated fatigue lives are equal; more than 1 when the experimental life values are higher than the calculated ones; lower than 1 when the experimental life values are lower than the calculated ones. The $T_{\rm N}$ quantity is insensitive to the dispersion of life. It can assume the same value for the results with low and high statistical dispersion. 
-
-
-Quantity $T_{\rm RMS}$ is a measure of statistical dispersion. It assumes the value equal to 1 when the mean and the statistical dispersion of experimental and computational life are identical. It is higher than 1 in other cases. $T_{\rm RMS}$ does not provide any information on whether the computational life is higher or lower than the experimental one.}
+\marked{The root mean square error is applied to measure the differences between fatigue lives obtained from predictions and the results from experiments. $T_{\rm RMS} = 1$ represents the mean value and the statistical dispersion of experimental and predicted lives are equal. In other cases, $T_{\rm RMS}$ is larger than 1, and the larger value of $T_{\rm RMS}$ represents the more dispersion between the experimental and predicted lives.}
 
 \begin{figure}[!htp]
 \centering
